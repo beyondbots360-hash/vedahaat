@@ -4,43 +4,43 @@
   --font-serif: var(--font-serif-display), "DM Serif Display", Georgia, serif;
   --font-sans: var(--font-sans), "Manrope", system-ui, -apple-system, sans-serif;
 
-  --color-forest: #174A3A;
-  --color-forest-dark: #10362A;
-  --color-forest-light: #205947;
-  --color-forest-soft: #2E6B56;
+  --color-forest: #1B4332;
+  --color-forest-dark: #132E22;
+  --color-forest-light: #2D6A4F;
+  --color-forest-soft: #40916C;
   
-  --color-gold: #D6A83F;
-  --color-gold-light: #E8BF5C;
-  --color-gold-dark: #B58628;
-  --color-gold-subtle: #F3E6C4;
+  --color-gold: #C59A3F;
+  --color-gold-light: #D4AF37;
+  --color-gold-dark: #A98028;
+  --color-gold-subtle: #F3EBD9;
 
-  --color-ivory: #F8F5EC;
-  --color-ivory-light: #FDFCF9;
-  --color-beige: #EFE8D8;
-  --color-beige-dark: #E2D7C0;
+  --color-ivory: #FBF9F4;
+  --color-ivory-light: #FFFFFF;
+  --color-beige: #F4EFE6;
+  --color-beige-dark: #EAE3D4;
 
-  --color-text-main: #252A26;
-  --color-text-muted: #5C675E;
-  --color-text-light: #808B82;
+  --color-text-main: #1C241F;
+  --color-text-muted: #526056;
+  --color-text-light: #7E8D82;
 
   --color-success: #3B7A57;
-  --color-border-warm: #E4DEC9;
+  --color-border-warm: #EAE3D2;
 }
 
 :root {
-  --background: #F8F5EC;
-  --foreground: #252A26;
+  --background: #FBF9F4;
+  --foreground: #1C241F;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #F8F5EC;
-  color: #252A26;
+  background-color: #FBF9F4;
+  color: #1C241F;
 }
 
 body {
-  background-color: #F8F5EC;
-  color: #252A26;
+  background-color: #FBF9F4;
+  color: #1C241F;
   font-family: var(--font-sans), "Manrope", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -52,14 +52,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F5EC;
+  background: #FBF9F4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D6A83F;
+  background: #C59A3F;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B58628;
+  background: #A98028;
 }
 
 /* Botanical Decorative Dividers & Accents */
@@ -74,7 +74,7 @@ body {
   content: "";
   height: 1px;
   width: 50px;
-  background: linear-gradient(90deg, transparent, #D6A83F, transparent);
+  background: linear-gradient(90deg, transparent, #C59A3F, transparent);
 }
 
 .script-tag {

@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
             <span className="text-3xl font-serif font-bold text-[#D6A83F]">A</span>
           </div>
           <h1 className="text-2xl font-serif font-bold text-[#174A3A]">
-            AyuBazaar Admin
+            VedaHaat Admin
           </h1>
           <p className="text-sm text-[#78857C] mt-1 font-medium">
             Ayurvedic Store Management & Price Control

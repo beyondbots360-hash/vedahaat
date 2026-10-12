@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Gift, Sparkles, Star, ShieldCheck } from "lucide-react";
 import { PRODUCTS, ProductDetail } from "@/data/products";
 import { motion } from "framer-motion";
 
@@ -49,19 +49,20 @@ export default function ProductsSection() {
   }, []);
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-[#F8F5EC] relative">
+    <section id="products" className="py-20 sm:py-24 bg-[#FBF9F4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="flex items-center justify-center gap-4 mb-2">
-            <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-transparent to-[#D6A83F]" />
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#174A3A] tracking-tight">
-              Our Formulations
-            </h2>
-            <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-l from-transparent to-[#D6A83F]" />
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F0EA] border border-[#CFDFD3] text-[#1B4332] text-xs font-bold uppercase tracking-wider mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#C59A3F]" />
+            <span>Targeted Botanical Systems</span>
           </div>
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] text-[#78857C] uppercase">
-            Three Pure Ayurvedic Systems for Vitality, Digestion & Metabolic Wellness
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1B4332] tracking-tight">
+            Our Flagship Formulations
+          </h2>
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.16em] text-[#7E8D82] uppercase mt-2">
+            Three Pure Ayurvedic Systems for Vitality, Digestion & Glucose Harmony
           </p>
         </div>
 
@@ -78,8 +79,8 @@ export default function ProductsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                whileHover={isOutOfStock ? {} : { y: -6 }}
-                className={`group bg-[#FAF7F0] rounded-3xl p-6 sm:p-7 border border-[#E9E2D1] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${
+                whileHover={isOutOfStock ? {} : { y: -8 }}
+                className={`group bg-white rounded-3xl p-6 sm:p-7 border border-[#EAE2D2] shadow-sm hover:shadow-2xl hover:border-[#C59A3F]/50 transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${
                   isOutOfStock ? "border-amber-200/80" : ""
                 }`}
               >
@@ -95,7 +96,7 @@ export default function ProductsSection() {
                 {/* Special Combo Badge for Yameny Khalta */}
                 {isYameny && !isOutOfStock && (
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#D6A83F] to-[#C2932E] text-[#11382C] text-[11px] font-bold shadow-sm uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#C59A3F] to-[#B3872E] text-white text-[11px] font-bold shadow-sm uppercase tracking-wider">
                       <Gift className="w-3.5 h-3.5" />
                       <span>FREE Lava 31 Gold</span>
                     </span>
@@ -104,21 +105,21 @@ export default function ProductsSection() {
 
                 <div>
                   {/* Image Container with Subtle Combo Display */}
-                  <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-white/95 border border-[#EBE4D5] mb-6 flex items-center justify-center p-2">
+                  <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-[#FBF9F4] border border-[#EAE2D2] mb-6 flex items-center justify-center p-3">
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
-                      className={`object-contain p-1 transition-transform duration-500 ${
+                      className={`object-contain p-2 transition-transform duration-500 ${
                         isOutOfStock ? "opacity-60 grayscale-[30%]" : "group-hover:scale-105"
                       }`}
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="text-center px-2">
-                    <div className="mb-1 flex items-center justify-center gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#A47128]">
+                  <div className="text-center px-1">
+                    <div className="mb-2 flex items-center justify-center gap-2">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#A98028]">
                         {product.category}
                       </span>
                       {isOutOfStock && (
@@ -128,45 +129,51 @@ export default function ProductsSection() {
                       )}
                     </div>
 
-                    <h3 className="text-2xl font-serif font-bold text-[#174A3A] tracking-tight mb-2">
+                    <h3 className="text-2xl font-serif font-bold text-[#1B4332] tracking-tight mb-2">
                       {product.name}
                     </h3>
 
+                    {/* Star Rating Strip */}
+                    <div className="flex items-center justify-center gap-1.5 mb-3">
+                      <div className="flex text-[#C59A3F]">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                        ))}
+                      </div>
+                      <span className="text-xs font-bold text-[#1B4332]">{product.rating}</span>
+                      <span className="text-xs text-[#7E8D82]">({product.reviewCount}+ reviews)</span>
+                    </div>
+
                     {isYameny && (
-                      <div className="inline-flex items-center gap-1.5 text-xs text-[#2E3C32] font-semibold bg-[#FAF0E6] px-3 py-1 rounded-full border border-[#E8D7C2] mb-3">
-                        <Sparkles className="w-3.5 h-3.5 text-[#D6A83F]" />
+                      <div className="inline-flex items-center gap-1.5 text-xs text-[#1B4332] font-semibold bg-[#E8F0EA] px-3 py-1 rounded-full border border-[#CFDFD3] mb-3">
+                        <Sparkles className="w-3.5 h-3.5 text-[#C59A3F]" />
                         <span>Includes Full-Size Lava 31 Gold Oil (Worth ₹1,899) FREE</span>
                       </div>
                     )}
 
-                    <p className="text-sm text-[#546056] leading-relaxed line-clamp-3 mb-6 font-normal">
+                    <p className="text-sm text-[#526056] leading-relaxed line-clamp-3 mb-6 font-normal">
                       {product.description}
                     </p>
                   </div>
                 </div>
 
                 {/* Price and Action Buttons */}
-                <div className="pt-2 border-t border-[#EBE4D5]/80">
+                <div className="pt-4 border-t border-[#F2ECE1]">
                   <div className="flex items-center justify-between mb-4 px-1">
                     <div>
-                      <span className="text-xs text-[#78857C] block font-medium">Segment Price</span>
+                      <span className="text-xs text-[#7E8D82] block font-medium">Special Online Price</span>
                       <div className="flex items-baseline gap-2">
-                        <span className="text-xl font-serif font-bold text-[#174A3A]">
+                        <span className="text-2xl font-serif font-bold text-[#1B4332]">
                           {product.price}
                         </span>
-                        <span className="text-xs text-[#8C988F] line-through">
+                        <span className="text-xs text-[#7E8D82] line-through">
                           {product.originalPrice}
                         </span>
                       </div>
                     </div>
                     {product.discount && !isOutOfStock && (
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#EBF2EC] text-[#2E6B47] border border-[#D5E3D7]">
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#E8F0EA] text-[#2D6A4F] border border-[#CFDFD3]">
                         {product.discount}
-                      </span>
-                    )}
-                    {isOutOfStock && (
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-stone-100 text-stone-600 border border-stone-300">
-                        Out of Stock
                       </span>
                     )}
                   </div>
@@ -174,26 +181,26 @@ export default function ProductsSection() {
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
                     <Link
                       href={`/products/${product.slug}`}
-                      className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-white border border-[#DCD5C3] text-[#174A3A] text-xs font-bold hover:bg-[#EFE8D8] transition-all duration-300"
+                      className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#FBF9F4] border border-[#E5DCBE] text-[#1B4332] text-xs font-bold hover:bg-[#F2ECE1] transition-all duration-300"
                     >
                       <span>View Details</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#D6A83F]" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#C59A3F]" />
                     </Link>
 
                     {isOutOfStock ? (
                       <button
                         type="button"
                         disabled
-                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#E5DFCE] text-[#7A857D] text-xs font-bold cursor-not-allowed border border-[#DCD5C3]"
+                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#EAE3D4] text-[#7E8D82] text-xs font-bold cursor-not-allowed border border-[#E5DCBE]"
                       >
                         <span>Out of Stock</span>
                       </button>
                     ) : (
                       <Link
                         href={`/checkout?product=${product.slug}&qty=1`}
-                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#174A3A] text-white text-xs font-bold shadow-sm hover:bg-[#10362A] hover:shadow-md transition-all duration-300 group/btn"
+                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#1B4332] text-white text-xs font-bold shadow-sm hover:bg-[#132E22] hover:shadow-md transition-all duration-300 group/btn"
                       >
-                        <span>Buy Now • {product.price}</span>
+                        <span>Order Now • {product.price}</span>
                       </Link>
                     )}
                   </div>

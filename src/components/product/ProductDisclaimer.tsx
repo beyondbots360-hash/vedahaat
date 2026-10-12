@@ -13,7 +13,7 @@ export default function ProductDisclaimer() {
               Ayurvedic Advisory & Medical Disclaimer
             </h4>
             <p>
-              The statements and products displayed on AyuBazaar are based on classical Ayurvedic
+              The statements and products displayed on VedaHaat are based on classical Ayurvedic
               literature and traditional wellness practices. These products are herbal dietary
               supplements and are not intended to diagnose, treat, cure, or prevent any medical
               disease.

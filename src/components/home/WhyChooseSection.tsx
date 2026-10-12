@@ -1,91 +1,93 @@
 "use client";
 
-import { Leaf, Award, ShieldCheck, Truck } from "lucide-react";
+import { Leaf, Award, ShieldCheck, Truck, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
-const FEATURES = [
+const PILLARS = [
   {
-    icon: Leaf,
-    title: "Pure & Natural",
-    description: "Made from traditional herbal ingredients",
+    number: "01",
+    title: "Wildcrafted Botanicals",
+    description: "Sourced sustainably from native bio-regions across India and ancient Sidr groves for peak phytochemical potency.",
+    badge: "Origin Traceability",
   },
   {
-    icon: Award,
-    title: "Rooted in Indian Tradition",
-    description: "Inspired by centuries of Ayurveda",
+    number: "02",
+    title: "Classical Samhita Ratios",
+    description: "Formulated adhering strictly to traditional Ayurvedic treatises (Charaka & Sushruta) combined with modern hygiene standards.",
+    badge: "100% Classical",
   },
   {
-    icon: ShieldCheck,
-    title: "Trusted & Authentic",
-    description: "Quality you can rely on",
+    number: "03",
+    title: "Tested for Safety & Purity",
+    description: "Every batch is rigorously tested for heavy metals, microbial safety, and adulterants. Zero artificial colors or fillers.",
+    badge: "Standardized Grade",
   },
   {
-    icon: Truck,
-    title: "Easy Ordering",
-    description: "Simple and secure payment process",
+    number: "04",
+    title: "Discreet Express Delivery",
+    description: "Secure, tamper-evident packaging dispatched via priority air couriers across all Indian PIN codes with live tracking.",
+    badge: "Fast Dispatch",
   },
 ];
 
 export default function WhyChooseSection() {
   return (
-    <section id="why-choose" className="py-16 sm:py-20 bg-[#F8F5EC] relative overflow-hidden">
-      {/* Background Subtle Leaf Accents */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-12 w-48 h-48 pointer-events-none opacity-30 mix-blend-multiply">
-        <svg viewBox="0 0 160 160" className="w-full h-full fill-[#5C8A63]/25">
-          <path d="M20,80 Q60,10 140,20 Q120,90 20,80 Z" />
-        </svg>
-      </div>
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-12 w-48 h-48 pointer-events-none opacity-30 mix-blend-multiply">
-        <svg viewBox="0 0 160 160" className="w-full h-full fill-[#5C8A63]/25">
-          <path d="M140,80 Q100,10 20,20 Q40,90 140,80 Z" />
-        </svg>
-      </div>
-
+    <section id="why-choose" className="py-20 sm:py-24 bg-[#FBF9F4] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Heading with Ornamental Lines */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="flex items-center justify-center gap-4 mb-2">
-            <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-transparent to-[#D6A83F]" />
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#174A3A] tracking-tight">
-              Why Choose VedaHaat
-            </h2>
-            <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-l from-transparent to-[#D6A83F]" />
+        {/* Section Heading */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F0EA] border border-[#CFDFD3] text-[#1B4332] text-xs font-bold uppercase tracking-wider mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#C59A3F]" />
+            <span>The VedaHaat Standard</span>
           </div>
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] text-[#78857C] uppercase">
-            More Than Products. A Healthier Tomorrow.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1B4332] tracking-tight">
+            Our Core Principles
+          </h2>
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.16em] text-[#7E8D82] uppercase mt-2">
+            Ancient Science. Modern Purity. Uncompromising Integrity.
           </p>
         </div>
 
-        {/* 4 Feature Items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {FEATURES.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center flex flex-col items-center group"
-              >
-                {/* Circular Icon Container */}
-                <div className="w-20 h-20 rounded-full bg-[#EBE4D5]/60 border border-[#DDD5C0] flex items-center justify-center mb-5 group-hover:scale-105 group-hover:bg-[#E5DFCE] group-hover:border-[#D6A83F]/50 transition-all duration-300 shadow-xs">
-                  <IconComponent className="w-8 h-8 text-[#174A3A] group-hover:text-[#D6A83F] transition-colors duration-300" />
+        {/* 4 Feature Items Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {PILLARS.map((item, index) => (
+            <motion.div
+              key={item.number}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -6 }}
+              className="bg-white rounded-3xl p-7 border border-[#EAE2D2] shadow-xs hover:shadow-xl hover:border-[#C59A3F]/50 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                {/* Large Number & Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-3xl sm:text-4xl font-serif font-bold text-[#E5DCBE] group-hover:text-[#C59A3F] transition-colors">
+                    {item.number}
+                  </span>
+                  <span className="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-[#E8F0EA] text-[#1B4332]">
+                    {item.badge}
+                  </span>
                 </div>
 
                 {/* Feature Title */}
-                <h3 className="text-lg font-serif font-bold text-[#174A3A] mb-2 tracking-tight">
+                <h3 className="text-xl font-serif font-bold text-[#1B4332] mb-3 tracking-tight group-hover:text-[#2D6A4F] transition-colors">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#546056] leading-relaxed max-w-xs font-normal">
+                <p className="text-sm text-[#526056] leading-relaxed font-normal">
                   {item.description}
                 </p>
-              </motion.div>
-            );
-          })}
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[#F2ECE1] flex items-center gap-2 text-xs font-semibold text-[#1B4332]">
+                <Leaf className="w-3.5 h-3.5 text-[#2D6A4F]" />
+                <span>Ayurvedic Assured</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

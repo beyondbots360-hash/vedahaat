@@ -105,7 +105,7 @@ export default async function AdminDashboardPage() {
           </div>
           <div>
             <div className="text-lg font-bold text-emerald-800">Supabase Connected</div>
-            <p className="text-xs text-[#78857C] mt-1">Project: Ayubazaar (Live)</p>
+            <p className="text-xs text-[#78857C] mt-1">Project: VedaHaat (Live)</p>
           </div>
         </div>
       </div>

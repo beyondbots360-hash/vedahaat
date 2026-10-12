@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 export async function POST(req: NextRequest) {
   try {
     const { password } = await req.json();
-    const correctPassword = process.env.ADMIN_PASSWORD || "ayubazaar2026";
+    const correctPassword = process.env.ADMIN_PASSWORD || "vedahaat2026";
 
     if (!password || password !== correctPassword) {
       return NextResponse.json({ success: false, error: "Invalid admin password" }, { status: 401 });

@@ -33,7 +33,7 @@ export default async function AdminLayout({
               </div>
               <div>
                 <h2 className="font-serif text-lg font-bold tracking-tight text-white">
-                  AyuBazaar
+                  VedaHaat
                 </h2>
                 <p className="text-[10px] uppercase font-bold tracking-widest text-[#D6A83F]">
                   Admin Portal

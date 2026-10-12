@@ -1,110 +1,97 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MessageCircle, MapPin, Leaf } from "lucide-react";
-
-function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" {...props}>
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-    </svg>
-  );
-}
-
-function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" {...props}>
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-    </svg>
-  );
-}
-
+import { Phone, Mail, MessageCircle, MapPin, Leaf, ShieldCheck, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-[#FAF7F0] border-t border-[#E8E1CF] pt-16 pb-8 text-[#252A26]">
+    <footer id="footer" className="bg-[#132E22] text-[#F4EFE6] pt-16 pb-8 border-t border-[#1B4332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-14 border-b border-[#E5DFCE]">
+        {/* Top Newsletter / Trust Strip */}
+        <div className="pb-12 mb-12 border-b border-[#254A39] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#C59A3F] block mb-1">
+              Join the VedaHaat Circle
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
+              Traditional Indian Wellness In Your Inbox
+            </h3>
+            <p className="text-xs sm:text-sm text-[#A5B5AB] mt-1">
+              Receive classical Ayurvedic routines, dietary guidance, and exclusive batch discounts.
+            </p>
+          </div>
+          <div className="lg:col-span-5 flex items-center gap-3">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="w-full px-4 py-3 rounded-full bg-[#1B4332] border border-[#2D6A4F] text-white text-xs sm:text-sm placeholder-[#7E8D82] focus:outline-none focus:border-[#C59A3F]"
+            />
+            <button
+              type="button"
+              className="px-6 py-3 rounded-full bg-[#C59A3F] text-[#132E22] text-xs sm:text-sm font-bold hover:bg-[#D4AF37] transition-colors shrink-0"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        {/* 4 Footer Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-14 border-b border-[#254A39]">
           {/* Col 1: Brand */}
           <div className="space-y-5">
-            <div className="relative h-14 w-48">
+            <div className="relative h-16 w-52 bg-white/95 rounded-2xl p-2 border border-[#C59A3F]/30">
               <Image
                 src="/images/logo.png"
                 alt="VedaHaat Logo"
                 fill
-                className="object-contain object-left"
+                className="object-contain p-1"
               />
             </div>
-            <p className="text-sm text-[#5C665F] leading-relaxed max-w-sm">
-              Your trusted destination for carefully selected Ayurvedic and herbal products.
+            <p className="text-xs sm:text-sm text-[#A5B5AB] leading-relaxed max-w-sm">
+              Your trusted destination for carefully selected Ayurvedic and herbal formulations inspired by ancient classical Indian treatises.
             </p>
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="w-9 h-9 rounded-full bg-[#174A3A] text-white flex items-center justify-center hover:bg-[#D6A83F] transition-colors duration-300"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="w-9 h-9 rounded-full bg-[#174A3A] text-white flex items-center justify-center hover:bg-[#D6A83F] transition-colors duration-300"
-              >
-                <InstagramIcon />
-              </a>
+            {/* WhatsApp Quick Trigger */}
+            <div className="pt-1">
               <a
                 href="https://wa.me/918929515262"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp"
-                className="w-9 h-9 rounded-full bg-[#174A3A] text-white flex items-center justify-center hover:bg-[#3B7A57] transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-xs font-bold text-[#C59A3F] hover:text-white transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                <span>Chat with Ayurvedic Consultant</span>
               </a>
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div>
-            <h3 className="text-lg font-serif font-bold text-[#174A3A] tracking-wide mb-5">
+            <h3 className="text-base font-serif font-bold text-[#C59A3F] tracking-wide mb-5">
               Quick Links
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-xs sm:text-sm">
               <li>
-                <Link
-                  href="/"
-                  className="text-[#4F5951] hover:text-[#174A3A] transition-colors font-medium inline-block hover:translate-x-1 duration-200"
-                >
+                <Link href="/" className="text-[#A5B5AB] hover:text-white transition-colors font-medium">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#products"
-                  className="text-[#4F5951] hover:text-[#174A3A] transition-colors font-medium inline-block hover:translate-x-1 duration-200"
-                >
-                  Our Products
+                <Link href="/#products" className="text-[#A5B5AB] hover:text-white transition-colors font-medium">
+                  Our Formulations
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#why-choose"
-                  className="text-[#4F5951] hover:text-[#174A3A] transition-colors font-medium inline-block hover:translate-x-1 duration-200"
-                >
-                  About Us
+                <Link href="/#ingredients" className="text-[#A5B5AB] hover:text-white transition-colors font-medium">
+                  Botanical Herbs
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#footer"
-                  className="text-[#4F5951] hover:text-[#174A3A] transition-colors font-medium inline-block hover:translate-x-1 duration-200"
-                >
-                  Contact
+                <Link href="/#why-choose" className="text-[#A5B5AB] hover:text-white transition-colors font-medium">
+                  Our Principles
+                </Link>
+              </li>
+              <li>
+                <Link href="/#footer" className="text-[#A5B5AB] hover:text-white transition-colors font-medium">
+                  Contact & Support
                 </Link>
               </li>
             </ul>
@@ -112,63 +99,63 @@ export default function Footer() {
 
           {/* Col 3: Contact Us */}
           <div>
-            <h3 className="text-lg font-serif font-bold text-[#174A3A] tracking-wide mb-5">
-              Contact Us
+            <h3 className="text-base font-serif font-bold text-[#C59A3F] tracking-wide mb-5">
+              Customer Support
             </h3>
-            <ul className="space-y-3.5 text-sm">
-              <li className="flex items-center gap-3 text-[#4F5951]">
-                <Phone className="w-4 h-4 text-[#174A3A] shrink-0" />
-                <a href="tel:+918929515262" className="hover:text-[#174A3A] transition-colors font-medium">
+            <ul className="space-y-3.5 text-xs sm:text-sm">
+              <li className="flex items-center gap-3 text-[#A5B5AB]">
+                <Phone className="w-4 h-4 text-[#C59A3F] shrink-0" />
+                <a href="tel:+918929515262" className="hover:text-white transition-colors font-medium">
                   +91 89295 15262
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[#4F5951]">
-                <Mail className="w-4 h-4 text-[#174A3A] shrink-0" />
-                <a href="mailto:support@vedahaat.in" className="hover:text-[#174A3A] transition-colors">
+              <li className="flex items-center gap-3 text-[#A5B5AB]">
+                <Mail className="w-4 h-4 text-[#C59A3F] shrink-0" />
+                <a href="mailto:support@vedahaat.in" className="hover:text-white transition-colors">
                   support@vedahaat.in
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[#4F5951]">
-                <MessageCircle className="w-4 h-4 text-[#3B7A57] shrink-0" />
+              <li className="flex items-center gap-3 text-[#A5B5AB]">
+                <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
                 <a
                   href="https://wa.me/918929515262"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#174A3A] transition-colors font-medium"
+                  className="hover:text-white transition-colors font-medium"
                 >
                   WhatsApp: +91 89295 15262
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[#4F5951]">
-                <MapPin className="w-4 h-4 text-[#174A3A] shrink-0" />
-                <span>India</span>
+              <li className="flex items-center gap-3 text-[#A5B5AB]">
+                <MapPin className="w-4 h-4 text-[#C59A3F] shrink-0" />
+                <span>Pan-India Fulfillment</span>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Our Promise */}
+          {/* Col 4: Our Heritage Promise */}
           <div>
-            <h3 className="text-lg font-serif font-bold text-[#174A3A] tracking-wide mb-5">
-              Our Promise
+            <h3 className="text-base font-serif font-bold text-[#C59A3F] tracking-wide mb-5">
+              Our Purity Pledge
             </h3>
-            <div className="space-y-5">
+            <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#EBF2EC] flex items-center justify-center shrink-0 mt-0.5">
-                  <Leaf className="w-4 h-4 text-[#3B7A57]" />
+                <div className="w-8 h-8 rounded-full bg-[#1B4332] flex items-center justify-center shrink-0 mt-0.5">
+                  <ShieldCheck className="w-4 h-4 text-[#C59A3F]" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-[#174A3A]">
-                    Natural Products
+                  <h4 className="text-xs sm:text-sm font-semibold text-white">
+                    100% Shuddha Formulations
                   </h4>
-                  <p className="text-xs text-[#5C665F]">for a Healthier Tomorrow</p>
+                  <p className="text-[11px] text-[#A5B5AB]">Zero adulterants or artificial binders</p>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#E8E1CF]">
-                <p className="text-base font-bold text-[#174A3A] tracking-wide">
+              <div className="pt-3 border-t border-[#254A39]">
+                <p className="text-base font-bold text-white tracking-wide">
                   स्वस्थ भारत, बेहतर कल
                 </p>
-                <p className="text-[11px] font-semibold text-[#8C7A54] uppercase tracking-wider mt-1">
+                <p className="text-[10px] font-semibold text-[#C59A3F] uppercase tracking-wider mt-0.5">
                   A Healthier India, A Brighter Tomorrow
                 </p>
               </div>
@@ -177,14 +164,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F7A71]">
-          <p>© 2024 VedaHaat. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy-terms" className="hover:text-[#174A3A] transition-colors">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7E8D82]">
+          <p>© {new Date().getFullYear()} VedaHaat. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-[#A5B5AB]">
+            <Link href="/" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <span>|</span>
-            <Link href="/privacy-terms" className="hover:text-[#174A3A] transition-colors">
+            <Link href="/" className="hover:text-white transition-colors">
               Terms & Conditions
             </Link>
           </div>

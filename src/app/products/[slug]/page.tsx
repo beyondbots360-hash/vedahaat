@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (slug === "lava31-gold") {
     return {
-      title: "Lava 31 Gold (Included Free with Yameny Khalta) | AyuBazaar",
+      title: "Lava 31 Gold (Included Free with Yameny Khalta) | VedaHaat",
     };
   }
 
@@ -38,15 +38,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!product) {
     return {
-      title: "Product Not Found | AyuBazaar",
+      title: "Product Not Found | VedaHaat",
     };
   }
 
   return {
-    title: `${product.name} | AyuBazaar - Traditional Ayurvedic Wellness`,
+    title: `${product.name} | VedaHaat - Traditional Ayurvedic Wellness`,
     description: product.shortDescription,
     openGraph: {
-      title: `${product.name} | AyuBazaar`,
+      title: `${product.name} | VedaHaat`,
       description: product.shortDescription,
       images: [
         {
@@ -132,7 +132,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-serif text-[#174A3A] tracking-tight">
-                Explore More AyuBazaar Formulations
+                Explore More VedaHaat Formulations
               </h3>
               <p className="text-xs sm:text-sm text-[#6E7A71] mt-1">
                 Time-honored Ayurvedic wellness for your everyday vitality and balance

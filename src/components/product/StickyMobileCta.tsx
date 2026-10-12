@@ -12,10 +12,10 @@ export default function StickyMobileCta({ product }: StickyMobileCtaProps) {
   const isOutOfStock = product.inStock === false;
 
   const whatsappOrderMessage = encodeURIComponent(
-    `Hello AyuBazaar! I would like to order *${product.name}* at ${product.price}. Please confirm my order.`
+    `Hello VedaHaat! I would like to order *${product.name}* at ${product.price}. Please confirm my order.`
   );
   const whatsappNotifyMessage = encodeURIComponent(
-    `Hello AyuBazaar! Please notify me when *${product.name}* is back in stock.`
+    `Hello VedaHaat! Please notify me when *${product.name}* is back in stock.`
   );
   const whatsappUrl = `https://wa.me/918929515262?text=${isOutOfStock ? whatsappNotifyMessage : whatsappOrderMessage}`;
 

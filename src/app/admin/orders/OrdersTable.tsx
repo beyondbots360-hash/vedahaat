@@ -59,7 +59,7 @@ export default function OrdersTable({ initialOrders }: { initialOrders: Order[] 
     const cleanPhone = phone.replace(/[^0-9]/g, "");
     const formattedPhone = cleanPhone.startsWith("91") ? cleanPhone : `91${cleanPhone}`;
     const text = encodeURIComponent(
-      `Namaste ${customerName}, your AyuBazaar order #${orderId.slice(-6)} is confirmed! We are preparing your botanical order for dispatch.`
+      `Namaste ${customerName}, your VedaHaat order #${orderId.slice(-6)} is confirmed! We are preparing your botanical order for dispatch.`
     );
     window.open(`https://wa.me/${formattedPhone}?text=${text}`, "_blank");
   };
@@ -70,7 +70,7 @@ export default function OrdersTable({ initialOrders }: { initialOrders: Order[] 
         <Clock className="w-12 h-12 text-[#8C988F] mx-auto mb-3" />
         <h3 className="font-serif font-bold text-lg text-[#174A3A]">No Orders Yet</h3>
         <p className="text-sm text-[#78857C] mt-1">
-          When customers make purchases on AyuBazaar, orders and addresses will appear here.
+          When customers make purchases on VedaHaat, orders and addresses will appear here.
         </p>
       </div>
     );

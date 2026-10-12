@@ -30,7 +30,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
     if (typeof window === "undefined") return;
     const shareUrl = window.location.href;
     const shareData = {
-      title: `${product.name} | AyuBazaar`,
+      title: `${product.name} | VedaHaat`,
       text: product.shortDescription,
       url: shareUrl,
     };
@@ -52,10 +52,10 @@ export default function ProductHero({ product }: ProductHeroProps) {
   const isOutOfStock = product.inStock === false;
 
   const whatsappOrderMessage = encodeURIComponent(
-    `Hello AyuBazaar! I would like to order *${product.name}* (Quantity: ${quantity}) at ${product.price}. Please assist with my delivery address and payment.`
+    `Hello VedaHaat! I would like to order *${product.name}* (Quantity: ${quantity}) at ${product.price}. Please assist with my delivery address and payment.`
   );
   const whatsappNotifyMessage = encodeURIComponent(
-    `Hello AyuBazaar! I am interested in *${product.name}* which is currently marked as Out of Stock. Please notify me once fresh stock becomes available.`
+    `Hello VedaHaat! I am interested in *${product.name}* which is currently marked as Out of Stock. Please notify me once fresh stock becomes available.`
   );
   const whatsappUrl = `https://wa.me/918929515262?text=${isOutOfStock ? whatsappNotifyMessage : whatsappOrderMessage}`;
 
