@@ -1,26 +1,34 @@
+import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/home/HeroSection";
+import SpotlightBanner from "@/components/home/SpotlightBanner";
 import ProductsSection from "@/components/home/ProductsSection";
-import IngredientsSection from "@/components/home/IngredientsSection";
-import WhyChooseSection from "@/components/home/WhyChooseSection";
-import CtaBanner from "@/components/home/CtaBanner";
+import LifestyleSection from "@/components/home/LifestyleSection";
+import DoseDiagramSection from "@/components/home/DoseDiagramSection";
+import FaqSection from "@/components/home/FaqSection";
+import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
-      {/* 1. Herba Editorial Hero Section */}
+    <div className="flex flex-col bg-[#FBF9F4]">
+      {/* 1. Herba Curved Deep Forest Hero Section */}
       <HeroSection />
 
-      {/* 2. Flagship Botanical Formulations Section */}
+      {/* 2. Asymmetric Spotlight Banner ("Only the Best Botanicals") */}
+      <SpotlightBanner />
+
+      {/* 3. Products Showcase ("Wellness, Naturally Elevated") - 3 Light Sage Cards */}
       <ProductsSection />
 
-      {/* 3. New Herba Sacred Ingredients Showcase Section */}
-      <IngredientsSection />
+      {/* 4. Lifestyle & Efficacy Section ("Crafted for Natural Living") with Progress Bars */}
+      <LifestyleSection />
 
-      {/* 4. The VedaHaat Standard: Core Ayurvedic Principles */}
-      <WhyChooseSection />
+      {/* 5. Central 6-Node Circular Dosage Diagram ("Nature Inside Every Dose") */}
+      <div id="botanicals">
+        <DoseDiagramSection />
+      </div>
 
-      {/* 5. Direct Order CTA Banner */}
-      <CtaBanner />
+      {/* 6. Herba Accordion FAQ Section ("Everything You Need to Know") */}
+      <FaqSection />
     </div>
   );
 }

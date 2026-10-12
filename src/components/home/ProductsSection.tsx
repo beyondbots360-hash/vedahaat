@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Gift, Sparkles, Star, ShieldCheck } from "lucide-react";
+import { ArrowRight, Gift, Sparkles, Star } from "lucide-react";
 import { PRODUCTS, ProductDetail } from "@/data/products";
 import { motion } from "framer-motion";
 
@@ -49,24 +49,24 @@ export default function ProductsSection() {
   }, []);
 
   return (
-    <section id="products" className="py-20 sm:py-24 bg-[#FBF9F4] relative">
+    <section id="products" className="py-20 sm:py-28 bg-[#FBF9F4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
+        {/* Section Heading matching Herba "Wellness, Naturally Elevated" */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F0EA] border border-[#CFDFD3] text-[#1B4332] text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#C59A3F]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF2ED] text-[#0E2F20] text-xs font-bold uppercase tracking-wider mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>Targeted Botanical Systems</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1B4332] tracking-tight">
-            Our Flagship Formulations
+          <h2 className="text-3xl sm:text-5xl font-serif text-[#0E2F20] tracking-tight">
+            Wellness, Naturally Elevated
           </h2>
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.16em] text-[#7E8D82] uppercase mt-2">
-            Three Pure Ayurvedic Systems for Vitality, Digestion & Glucose Harmony
+          <p className="text-sm text-[#526056] mt-2">
+            Targeted herbal formulations designed for vitality, digestion, and glycemic stability.
           </p>
         </div>
 
-        {/* 3 Core Product Cards Grid */}
+        {/* 3 Herba-style Light Sage/Mint Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => {
             const isYameny = product.slug === "yameny-khalta";
@@ -80,23 +80,12 @@ export default function ProductsSection() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 whileHover={isOutOfStock ? {} : { y: -8 }}
-                className={`group bg-white rounded-3xl p-6 sm:p-7 border border-[#EAE2D2] shadow-sm hover:shadow-2xl hover:border-[#C59A3F]/50 transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${
-                  isOutOfStock ? "border-amber-200/80" : ""
-                }`}
+                className="bg-[#EBF2ED] rounded-[32px] p-6 sm:p-7 border border-[#D7E5DC] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group"
               >
-                {/* Out of Stock Badge */}
-                {isOutOfStock && (
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white text-[11px] font-bold shadow-sm uppercase tracking-wider">
-                      Out of Stock
-                    </span>
-                  </div>
-                )}
-
-                {/* Special Combo Badge for Yameny Khalta */}
+                {/* Special Combo Badge */}
                 {isYameny && !isOutOfStock && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#C59A3F] to-[#B3872E] text-white text-[11px] font-bold shadow-sm uppercase tracking-wider">
+                  <div className="absolute top-5 right-5 z-10">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F59E0B] text-[#0E2F20] text-[11px] font-bold shadow-sm uppercase tracking-wider">
                       <Gift className="w-3.5 h-3.5" />
                       <span>FREE Lava 31 Gold</span>
                     </span>
@@ -104,8 +93,18 @@ export default function ProductsSection() {
                 )}
 
                 <div>
-                  {/* Image Container with Subtle Combo Display */}
-                  <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-[#FBF9F4] border border-[#EAE2D2] mb-6 flex items-center justify-center p-3">
+                  {/* Top Category and Title */}
+                  <div className="text-left mb-4">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#A98028] block mb-1">
+                      {product.category}
+                    </span>
+                    <h3 className="text-2xl font-serif font-bold text-[#0E2F20] tracking-tight">
+                      {product.name}
+                    </h3>
+                  </div>
+
+                  {/* Clean Framed Image Container */}
+                  <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-white/80 border border-[#D7E5DC] mb-6 flex items-center justify-center p-3">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -116,94 +115,54 @@ export default function ProductsSection() {
                     />
                   </div>
 
-                  {/* Content */}
-                  <div className="text-center px-1">
-                    <div className="mb-2 flex items-center justify-center gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#A98028]">
-                        {product.category}
-                      </span>
-                      {isOutOfStock && (
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded-full">
-                          Sold Out
-                        </span>
-                      )}
-                    </div>
-
-                    <h3 className="text-2xl font-serif font-bold text-[#1B4332] tracking-tight mb-2">
-                      {product.name}
-                    </h3>
-
-                    {/* Star Rating Strip */}
-                    <div className="flex items-center justify-center gap-1.5 mb-3">
-                      <div className="flex text-[#C59A3F]">
+                  {/* Rating and Short Description */}
+                  <div className="text-left mb-6">
+                    <div className="flex items-center gap-1.5 mb-2">
+                      <div className="flex text-[#F59E0B]">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="w-3.5 h-3.5 fill-current" />
                         ))}
                       </div>
-                      <span className="text-xs font-bold text-[#1B4332]">{product.rating}</span>
-                      <span className="text-xs text-[#7E8D82]">({product.reviewCount}+ reviews)</span>
+                      <span className="text-xs font-bold text-[#0E2F20]">{product.rating}</span>
+                      <span className="text-xs text-[#7E8D82]">({product.reviewCount}+)</span>
                     </div>
 
-                    {isYameny && (
-                      <div className="inline-flex items-center gap-1.5 text-xs text-[#1B4332] font-semibold bg-[#E8F0EA] px-3 py-1 rounded-full border border-[#CFDFD3] mb-3">
-                        <Sparkles className="w-3.5 h-3.5 text-[#C59A3F]" />
-                        <span>Includes Full-Size Lava 31 Gold Oil (Worth ₹1,899) FREE</span>
-                      </div>
-                    )}
-
-                    <p className="text-sm text-[#526056] leading-relaxed line-clamp-3 mb-6 font-normal">
+                    <p className="text-xs sm:text-sm text-[#526056] line-clamp-2 leading-relaxed">
                       {product.description}
                     </p>
                   </div>
                 </div>
 
-                {/* Price and Action Buttons */}
-                <div className="pt-4 border-t border-[#F2ECE1]">
-                  <div className="flex items-center justify-between mb-4 px-1">
-                    <div>
-                      <span className="text-xs text-[#7E8D82] block font-medium">Special Online Price</span>
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-serif font-bold text-[#1B4332]">
-                          {product.price}
-                        </span>
-                        <span className="text-xs text-[#7E8D82] line-through">
-                          {product.originalPrice}
-                        </span>
-                      </div>
-                    </div>
-                    {product.discount && !isOutOfStock && (
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#E8F0EA] text-[#2D6A4F] border border-[#CFDFD3]">
-                        {product.discount}
-                      </span>
-                    )}
+                {/* Bottom Herba Action Pill Bar: Price + Order Button */}
+                <div className="pt-4 border-t border-[#D7E5DC]/80 flex items-center justify-between gap-3">
+                  <div>
+                    <span className="text-[10px] text-[#7E8D82] uppercase font-bold block">Price</span>
+                    <span className="text-xl font-bold text-[#0E2F20]">{product.price}</span>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
-                    <Link
-                      href={`/products/${product.slug}`}
-                      className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#FBF9F4] border border-[#E5DCBE] text-[#1B4332] text-xs font-bold hover:bg-[#F2ECE1] transition-all duration-300"
+                  {isOutOfStock ? (
+                    <button
+                      disabled
+                      className="px-5 py-2.5 rounded-full bg-[#D7E5DC] text-[#7E8D82] text-xs font-bold cursor-not-allowed"
                     >
-                      <span>View Details</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#C59A3F]" />
-                    </Link>
-
-                    {isOutOfStock ? (
-                      <button
-                        type="button"
-                        disabled
-                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#EAE3D4] text-[#7E8D82] text-xs font-bold cursor-not-allowed border border-[#E5DCBE]"
+                      Sold Out
+                    </button>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <Link
+                        href={`/products/${product.slug}`}
+                        className="px-4 py-2.5 rounded-full bg-white text-[#0E2F20] text-xs font-bold hover:bg-[#F2ECE1] transition-colors shadow-2xs"
                       >
-                        <span>Out of Stock</span>
-                      </button>
-                    ) : (
+                        Details
+                      </Link>
                       <Link
                         href={`/checkout?product=${product.slug}&qty=1`}
-                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-[#1B4332] text-white text-xs font-bold shadow-sm hover:bg-[#132E22] hover:shadow-md transition-all duration-300 group/btn"
+                        className="px-5 py-2.5 rounded-full bg-[#0E2F20] text-white text-xs font-bold hover:bg-[#F59E0B] hover:text-[#0E2F20] shadow-sm transition-all duration-200"
                       >
-                        <span>Order Now • {product.price}</span>
+                        Buy Now
                       </Link>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
