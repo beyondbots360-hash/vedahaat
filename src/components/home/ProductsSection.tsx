@@ -103,13 +103,16 @@ export default function ProductsSection() {
                     </h3>
                   </div>
 
-                  {/* Clean Framed Image Container */}
-                  <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden bg-white/80 border border-[#D7E5DC] mb-6 flex items-center justify-center p-3">
+                  {/* Clean Framed Image Container with Botanical Green Background */}
+                  <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden bg-gradient-to-b from-[#133A29] to-[#0B2519] border border-[#1E4D38] mb-6 flex items-center justify-center p-3 shadow-inner group-hover:border-[#F59E0B]/40 transition-colors">
+                    {/* Ambient subtle center glow */}
+                    <div className="absolute inset-0 bg-radial from-[#1E523A]/40 to-transparent pointer-events-none" />
+
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
-                      className={`object-contain p-2 transition-transform duration-500 ${
+                      className={`object-contain p-2 transition-transform duration-500 relative z-10 ${
                         isOutOfStock ? "opacity-60 grayscale-[30%]" : "group-hover:scale-105"
                       }`}
                     />

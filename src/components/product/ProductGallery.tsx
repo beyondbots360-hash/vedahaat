@@ -27,13 +27,16 @@ export default function ProductGallery({ image, name, badge, inStock = true }: P
     <div className="space-y-4 select-none">
       {/* Single Dedicated Image Showcase with Zoom */}
       <div
-        className={`relative w-full aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden bg-[#FAF7F0] border border-[#E8E1CE] shadow-sm flex items-center justify-center group ${
+        className={`relative w-full aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-b from-[#133A29] to-[#0B2519] border border-[#1E4D38] shadow-lg flex items-center justify-center group ${
           inStock ? "cursor-crosshair" : "cursor-default"
         }`}
         onMouseEnter={() => inStock && setIsZoomed(true)}
         onMouseLeave={() => inStock && setIsZoomed(false)}
         onMouseMove={handleMouseMove}
       >
+        {/* Ambient subtle center glow */}
+        <div className="absolute inset-0 bg-radial from-[#1E523A]/40 to-transparent pointer-events-none" />
+
         {/* Badges Row */}
         <div className="absolute top-4 left-4 z-20 flex flex-wrap items-center gap-2">
           {!inStock ? (
