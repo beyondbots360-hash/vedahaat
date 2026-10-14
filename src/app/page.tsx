@@ -16,13 +16,10 @@ export default function HomePage() {
       {/* 2. Asymmetric Spotlight Banner ("Only the Best Botanicals") */}
       <SpotlightBanner />
 
-      {/* 3. Products Showcase ("Wellness, Naturally Elevated") - 3 Light Sage Cards */}
+      {/* 3. Products Showcase ("Wellness, Naturally Elevated") - 2 Light Sage Cards */}
       <ProductsSection />
 
-      {/* 4. Lifestyle & Efficacy Section ("Crafted for Natural Living") with Progress Bars */}
-      <LifestyleSection />
-
-      {/* 5. Central 6-Node Circular Dosage Diagram ("Nature Inside Every Dose") */}
+      {/* 4. Central 6-Node Circular Dosage Diagram ("Nature Inside Every Dose") */}
       <div id="botanicals">
         <DoseDiagramSection />
       </div>

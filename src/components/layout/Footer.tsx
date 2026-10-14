@@ -126,11 +126,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#lifestyle" className="hover:text-white transition-colors">
-                  Why VedaHaat
-                </Link>
-              </li>
-              <li>
                 <Link href="/#faqs" className="hover:text-white transition-colors">
                   FAQs
                 </Link>

@@ -47,12 +47,6 @@ export default function Navbar() {
               Botanicals
             </Link>
             <Link
-              href="/#lifestyle"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Why VedaHaat
-            </Link>
-            <Link
               href="/#faqs"
               className="text-white/80 hover:text-white transition-colors"
             >
@@ -117,13 +111,6 @@ export default function Navbar() {
               className="text-white/80 hover:text-white py-1 border-b border-white/10"
             >
               Botanicals
-            </Link>
-            <Link
-              href="/#lifestyle"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white/80 hover:text-white py-1 border-b border-white/10"
-            >
-              Why VedaHaat
             </Link>
             <Link
               href="/#faqs"
