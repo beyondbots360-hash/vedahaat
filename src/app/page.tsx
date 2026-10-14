@@ -1,11 +1,8 @@
-import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/home/HeroSection";
 import SpotlightBanner from "@/components/home/SpotlightBanner";
 import ProductsSection from "@/components/home/ProductsSection";
-import LifestyleSection from "@/components/home/LifestyleSection";
 import DoseDiagramSection from "@/components/home/DoseDiagramSection";
 import FaqSection from "@/components/home/FaqSection";
-import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
