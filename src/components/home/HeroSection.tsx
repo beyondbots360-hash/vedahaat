@@ -78,25 +78,25 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Product Cutout Showcase */}
+          {/* Right Column: Hero Banner Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             className="lg:col-span-6 relative flex items-center justify-center"
           >
-            {/* Glowing Aura behind bottle */}
-            <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#1A5338]/80 blur-3xl -z-10" />
+            {/* Glowing Aura behind banner */}
+            <div className="absolute w-80 sm:w-[480px] h-64 sm:h-80 rounded-full bg-[#1A5338]/90 blur-3xl -z-10" />
 
-            {/* Main Showcase Bottle */}
-            <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden p-6 flex items-center justify-center">
+            {/* Banner Showcase Frame */}
+            <div className="relative w-full max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black/30 group">
               <Image
-                src="/images/hero/hero-products.png"
-                alt="VedaHaat Flagship Collection"
-                width={520}
-                height={520}
+                src="/images/hero/hero-banner.jpg"
+                alt="VedaHaat 4G Avleh Yameny Khalta & Tila Josh Jawani"
+                width={800}
+                height={550}
                 priority
-                className="object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
               />
             </div>
           </motion.div>
