@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (slug === "lava31-gold") {
     return {
-      title: "Lava 31 Gold (Included Free with Yameny Khalta) | VedaHaat",
+      title: "4G Avleh Yameny Khalta with Tila Josh Jawani | VedaHaat",
     };
   }
 

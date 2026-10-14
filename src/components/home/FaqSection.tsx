@@ -8,20 +8,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const FAQS = [
   {
-    q: "Is Lava 31 Gold really included free with Yameny Khalta?",
-    a: "Yes! Every single jar of Yameny Khalta Sidr Honey ordered through VedaHaat includes a full-size complimentary bottle of Lava 31 Gold Ayurvedic Vitality Oil at zero additional cost.",
+    q: "Is Tila Josh Jawani (15ml) really included free with 4G Avleh Yameny Khalta?",
+    a: "Yes! Every single jar of 4G Avleh Yameny Khalta ordered through VedaHaat includes a full-size complimentary 15ml bottle of Tila Josh Jawani Ayurvedic Vitality Oil at zero additional cost.",
   },
   {
-    q: "How do Yameny Khalta and Lava 31 Gold work together?",
-    a: "They form a holistic internal and external synergy: Yameny Khalta nourishes energy and Ojas internally through wild Sidr honey and adaptogenic herbs, while Lava 31 Gold is massaged externally to ease muscular tension and improve circulation.",
+    q: "How do 4G Avleh and Tila Josh Jawani work together?",
+    a: "They form a complete synergistic routine: 4G Avleh delivers internal vitality through Sidr honey and classical Rasayana herbs, while Tila Josh Jawani is massaged externally to ease muscular fatigue and support localized circulation.",
   },
   {
-    q: "Is Shivshakti Ayurvedic Churna habit-forming?",
-    a: "No. Unlike harsh chemical laxatives or senna-based powders, Shivshakti Churna works by balancing your natural digestive fire (Agni) with Triphala, Saunf, and Ajwain without creating bowel dependency.",
+    q: "How does Hikmo Sugar & Madhumeh Daman Powder support healthy blood sugar?",
+    a: "It harnesses classical Tikta (bitter) and Kashaya (astringent) botanicals—including pure Amla, Jamun seed, Gurmar, and Vijaysar—to help prevent post-meal glucose spikes, support natural insulin sensitivity, and ease frequent urination (polyurea).",
   },
   {
-    q: "Can I take Rahmorid Sugar Powder alongside regular medicines?",
-    a: "Yes. Simply maintain a 45-60 minute gap between consuming Rahmorid Sugar Powder and your regular doctor-prescribed medications. Always monitor your blood sugar routinely.",
+    q: "Can I take Hikmo Sugar & Madhumeh Daman Powder alongside regular medicines?",
+    a: "Yes. Simply maintain a 45-60 minute gap between taking the Ayurvedic powder and your regular doctor-prescribed medications. Always monitor your blood sugar routinely.",
   },
   {
     q: "How are the products packaged for shipping?",

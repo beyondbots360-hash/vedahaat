@@ -80,8 +80,8 @@ export default function OrderSummaryCard({
           <div className="flex items-center gap-2.5">
             <div className="relative w-10 h-10 rounded-lg bg-white border border-[#D6A83F]/30 overflow-hidden shrink-0">
               <Image
-                src="/images/products/lava-31-gold.png"
-                alt="Free Lava 31 Gold"
+                src="/images/products/yameny-khalta-combo.jpg"
+                alt="Free Tila Josh Jawani (15ml)"
                 fill
                 className="object-contain p-1"
               />
@@ -93,13 +93,13 @@ export default function OrderSummaryCard({
                 </span>
               </div>
               <span className="text-xs font-serif font-bold text-[#174A3A] block">
-                Lava 31 Gold Oil ({quantity} {quantity > 1 ? "Bottles" : "Bottle"})
+                Tila Josh Jawani (15ml) ({quantity} {quantity > 1 ? "Bottles" : "Bottle"})
               </span>
             </div>
           </div>
           <div className="text-right shrink-0">
             <span className="text-xs font-bold text-[#2E6B47]">FREE</span>
-            <span className="text-[10px] text-[#8A958D] line-through block">₹{1899 * quantity}</span>
+            <span className="text-[10px] text-[#8A958D] line-through block">₹{1499 * quantity}</span>
           </div>
         </div>
       )}

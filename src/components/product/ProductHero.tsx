@@ -168,13 +168,13 @@ export default function ProductHero({ product }: ProductHeroProps) {
                     <span className="text-xs font-bold uppercase tracking-wider text-[#11382C] bg-[#D6A83F]/30 px-2 py-0.5 rounded">
                       Special Combo Offer
                     </span>
-                    <span className="text-xs font-bold text-[#A47128]">Save ₹1,899</span>
+                    <span className="text-xs font-bold text-[#A47128]">Includes Free Gift</span>
                   </div>
                   <h4 className="text-sm font-serif font-bold text-[#174A3A]">
-                    Includes FREE Lava 31 Gold Vitality Oil (Full Size)
+                    Includes FREE Tila Josh Jawani (15ml) Vitality Oil
                   </h4>
                   <p className="text-xs text-[#546056] leading-relaxed">
-                    Every jar of Yameny Khalta includes a complimentary full-size bottle of Lava 31 Gold Ayurvedic Men&apos;s Wellness Oil for complete internal &amp; external vigor.
+                    Every order of 4G Avleh Yameny Khalta includes a complimentary full-size bottle of Tila Josh Jawani Ayurvedic Vitality Oil for complete internal &amp; external vigor.
                   </p>
                 </div>
               </div>
