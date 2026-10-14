@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Gift, Sparkles, Star } from "lucide-react";
+import { Gift, Sparkles, Star } from "lucide-react";
 import { PRODUCTS, ProductDetail } from "@/data/products";
 import { motion } from "framer-motion";
 
@@ -62,12 +62,12 @@ export default function ProductsSection() {
             Wellness, Naturally Elevated
           </h2>
           <p className="text-sm text-[#526056] mt-2">
-            Targeted herbal formulations designed for vitality, digestion, and glycemic stability.
+            Targeted herbal dual-formulations designed for royal vitality and glycemic stability.
           </p>
         </div>
 
-        {/* 3 Herba-style Light Sage/Mint Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* 2 Herba-style Light Sage/Mint Cards cleanly centered in a 2-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {products.map((product, index) => {
             const isYameny = product.slug === "yameny-khalta";
             const isOutOfStock = product.inStock === false;
@@ -80,14 +80,14 @@ export default function ProductsSection() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 whileHover={isOutOfStock ? {} : { y: -8 }}
-                className="bg-[#EBF2ED] rounded-[32px] p-6 sm:p-7 border border-[#D7E5DC] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group"
+                className="bg-[#EBF2ED] rounded-[32px] p-6 sm:p-8 border border-[#D7E5DC] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group"
               >
                 {/* Special Combo Badge */}
                 {isYameny && !isOutOfStock && (
                   <div className="absolute top-5 right-5 z-10">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F59E0B] text-[#0E2F20] text-[11px] font-bold shadow-sm uppercase tracking-wider">
                       <Gift className="w-3.5 h-3.5" />
-                      <span>FREE Lava 31 Gold</span>
+                      <span>FREE Tila Josh Jawani</span>
                     </span>
                   </div>
                 )}
@@ -104,7 +104,7 @@ export default function ProductsSection() {
                   </div>
 
                   {/* Clean Framed Image Container */}
-                  <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-white/80 border border-[#D7E5DC] mb-6 flex items-center justify-center p-3">
+                  <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden bg-white/80 border border-[#D7E5DC] mb-6 flex items-center justify-center p-3">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -127,7 +127,7 @@ export default function ProductsSection() {
                       <span className="text-xs text-[#7E8D82]">({product.reviewCount}+)</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-[#526056] line-clamp-2 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#526056] line-clamp-3 leading-relaxed">
                       {product.description}
                     </p>
                   </div>
@@ -137,7 +137,10 @@ export default function ProductsSection() {
                 <div className="pt-4 border-t border-[#D7E5DC]/80 flex items-center justify-between gap-3">
                   <div>
                     <span className="text-[10px] text-[#7E8D82] uppercase font-bold block">Price</span>
-                    <span className="text-xl font-bold text-[#0E2F20]">{product.price}</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-bold text-[#0E2F20]">{product.price}</span>
+                      <span className="text-xs text-[#7E8D82] line-through">{product.originalPrice}</span>
+                    </div>
                   </div>
 
                   {isOutOfStock ? (

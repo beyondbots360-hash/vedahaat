@@ -93,22 +93,17 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-white/75">
               <li>
                 <Link href="/products/yameny-khalta" className="hover:text-white transition-colors">
-                  Yameny Khalta with Sidr Honey
+                  4G Avleh Yameny Khalta
                 </Link>
               </li>
               <li>
-                <Link href="/products/shivshakti-churna" className="hover:text-white transition-colors">
-                  Shivshakti Ayurvedic Churna
+                <Link href="/products/hikmo-sugar-madhumeh-daman" className="hover:text-white transition-colors">
+                  Hikmo Sugar & Madhumeh Daman Powder
                 </Link>
               </li>
               <li>
-                <Link href="/products/rahmorid-sugar-powder" className="hover:text-white transition-colors">
-                  Rahmorid Sugar Powder
-                </Link>
-              </li>
-              <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
-                  Complimentary Lava 31 Gold
+                <Link href="/products/yameny-khalta" className="hover:text-white transition-colors">
+                  Included: Tila Josh Jawani (15ml)
                 </Link>
               </li>
             </ul>

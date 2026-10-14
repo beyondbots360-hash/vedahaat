@@ -58,413 +58,294 @@ export const PRODUCTS: ProductDetail[] = [
   {
     id: "yameny-khalta",
     slug: "yameny-khalta",
-    inStock: true,
-    name: "Yameny Khalta with Honey",
-    subtitle: "Traditional Royal Sidr Honey & Vitality Elixir (Includes FREE Lava 31 Gold)",
+    name: "4G Avleh Yameny Khalta with Sidr Honey",
+    subtitle: "Traditional Royal Majoon Formula (Includes FREE Tila Josh Jawani 15ml)",
     category: "Rasayana & Vitality Tonic",
     dosha: "Balances Vata & Pitta",
     price: "₹1,499",
     originalPrice: "₹1,999",
     discount: "Save 25%",
     rating: 4.9,
-    reviewCount: 363,
+    reviewCount: 382,
     image: "/images/products/yameny-khalta-combo.jpg",
     gallery: [
       "/images/products/yameny-khalta-combo.jpg",
-      "/images/products/yameny-khalta.png",
-      "/images/products/lava-31-gold.png",
     ],
-    badge: "Includes FREE Lava 31 Gold",
+    badge: "Includes FREE Tila Josh Jawani",
     description:
-      "A traditional royal Sidr honey formulation combined with natural Rasayana herbs. Every order includes a complimentary full-size bottle of Lava 31 Gold Men's Vitality Oil.",
+      "A classical royal Sidr honey & herbal Rasayana formulation designed for sustained vitality, strength, and stamina. Every order includes a complimentary full-size Tila Josh Jawani 15ml Ayurvedic Vitality Oil.",
     shortDescription:
-      "A traditional royal Sidr honey formulation crafted for daily energy and stamina. Comes with a complimentary Lava 31 Gold Men's Vitality Oil.",
+      "Royal Yemeni Sidr honey with Ashwagandha, Safed Musli, Royal Jelly, and dry fruits. Bundled with a free bottle of Tila Josh Jawani 15ml.",
     longDescription:
-      "Yameny Khalta with Honey is a centuries-old royal wellness recipe that combines wild-harvested Yemeni Sidr Honey with potent restorative herbs including Ashwagandha, Safed Musli, Royal Jelly, and selected dry fruits. In this special wellness segment, every jar of Yameny Khalta comes bundled with a complimentary full-size bottle of Lava 31 Gold Ayurvedic Massage Oil (formulated with Swarna Bhasma and Shilajit), delivering a complete internal and external vitality routine.",
+      "4G Avleh Yameny Khalta (Majoon) is an authentic royal restorative formulation crafted with wild-harvested Sidr Honey and revered Ayurvedic Rasayana herbs including Ashwagandha, Safed Musli, and dry fruits. Inspired by ancient royal wellness recipes, it naturally replenishes internal vitality, counters chronic fatigue, and restores stamina. In this exclusive combo, every jar is paired with a complimentary 15ml bottle of Tila Josh Jawani Ayurvedic Massage Oil, delivering a complete internal and external vitality routine.",
     freeGift: {
-      name: "Lava 31 Gold",
-      subtitle: "Ayurvedic Men's Wellness & Vigor Oil",
-      value: "₹1,899",
-      description: "Infused with Swarna Bhasma, Shilajit & 31 botanical herbs for local blood flow, tone, and sustained male vigor.",
-      image: "/images/products/lava-31-gold.png",
+      name: "Tila Josh Jawani (15ml)",
+      subtitle: "Ayurvedic External Vitality Oil",
+      value: "₹1,499",
+      description:
+        "Formulated with potent botanical extracts to support localized tone, vigor, and circulation.",
+      image: "/images/products/yameny-khalta-combo.jpg",
     },
     benefits: [
       {
+        title: "Sustained Natural Stamina & Strength",
+        description:
+          "Replenishes cellular Ojas and energy levels naturally without artificial stimulants, caffeine spikes, or crashes.",
         iconName: "Zap",
-        title: "Sustained Natural Energy",
-        description:
-          "Replenishes cellular vigor and vitality without caffeine spikes, crashes, or artificial stimulants.",
       },
       {
+        title: "Includes FREE Tila Josh Jawani (15ml)",
+        description:
+          "Enjoy internal nourishment through 4G Avleh alongside targeted external vigor with the complimentary Tila Josh Jawani oil.",
         iconName: "Flame",
-        title: "Includes FREE Lava 31 Gold (₹1,899 Value)",
-        description:
-          "Enjoy complete internal nourishment with pure Sidr honey alongside external vigor with complimentary Lava 31 Gold oil.",
       },
       {
+        title: "Immunity & Tissue Rejuvenation",
+        description:
+          "Rich in Sidr honey antioxidants and traditional restorative herbs that strengthen natural immunity and cellular resilience.",
         iconName: "ShieldCheck",
-        title: "Immunity & Ojas Booster",
-        description:
-          "Infused with rare Sidr honey antioxidants and royal jelly nutrients that strengthen your natural immune shield.",
       },
       {
-        iconName: "Sparkles",
-        title: "Restorative Rasayana Herbs",
+        title: "Ancient Raja Maharaja Recipe",
         description:
-          "Formulated with Ashwagandha and Safed Musli to promote physical strength, mental resilience, and rejuvenation.",
+          "Prepared following time-tested royal treatises to relieve physical fatigue and promote vitality in everyday life.",
+        iconName: "Sparkles",
       },
     ],
     ingredients: [
       {
         name: "Yemeni Sidr Honey",
         sanskritName: "Madhu (Sidr)",
-        property: "World's most revered medicinal honey, rich in flavonoids and natural enzymes.",
+        property:
+          "World's most revered medicinal honey, exceptionally rich in bio-active flavonoids, minerals, and live enzymes.",
       },
       {
         name: "Ashwagandha",
         sanskritName: "Withania Somnifera",
-        property: "Premier adaptogen that balances cortisol, promotes stamina, and reduces fatigue.",
+        property:
+          "Premier adaptogen that regulates cortisol, counters daily stress, and enhances stamina and muscular endurance.",
       },
       {
         name: "Safed Musli",
         sanskritName: "Chlorophytum Borivilianum",
-        property: "Traditional Rasayana herb prized for tissue replenishment and physical vigor.",
+        property:
+          "Revered Rasayana herb prized in classical texts for tissue replenishment, vitality, and physical vigor.",
       },
       {
         name: "Royal Jelly",
         sanskritName: "Raj Madhu",
-        property: "Nutrient powerhouse rich in B-vitamins, amino acids, and essential trace minerals.",
+        property:
+          "Natural nutrient powerhouse packed with B-complex vitamins, amino acids, and essential trace minerals.",
       },
       {
-        name: "Shuddha Shilajit & Swarna Bhasma (In Free Lava 31 Gold)",
-        sanskritName: "Shilajit & Swarna Bhasma",
-        property: "Enriched minerals and micro-calcined gold ash for deep tissue tone and external vigor.",
+        name: "Botanical Extracts in Tila Josh Jawani",
+        sanskritName: "Tailam & Rasayana Dravyas",
+        property:
+          "Specialized traditional oils formulated for external application to ease muscular fatigue and support localized circulation.",
       },
       {
-        name: "Pure Saffron & Almonds",
+        name: "Saffron & Dried Nuts",
         sanskritName: "Kesar & Vatada",
-        property: "Precious golden spice and natural fats for radiance, mood, and sustained tissue fuel.",
+        property:
+          "Precious spices and cold-pressed botanical fats for sustained tissue fuel, radiance, and mood balance.",
       },
     ],
     usageSteps: [
       {
         step: 1,
-        title: "Morning Elixir (Yameny Khalta)",
-        instruction: "Take 1 tablespoon (approx. 10g-15g) of Yameny Khalta followed by a cup of warm milk or water.",
-        tip: "Best consumed in the morning with breakfast to fuel all-day vigor and stamina.",
+        title: "Morning Routine (4G Avleh Yameny Khalta)",
+        instruction:
+          "Take 1 tablespoon (approx. 10g-15g) of 4G Avleh Yameny Khalta followed by a cup of warm milk or lukewarm water.",
+        tip: "Best taken in the morning with breakfast to sustain all-day vigor and physical stamina.",
       },
       {
         step: 2,
-        title: "Night Routine (Free Lava 31 Gold)",
-        instruction: "Dispense 5 to 7 drops of the complimentary Lava 31 Gold Oil onto palms and massage gently until absorbed.",
+        title: "Night Routine (Tila Josh Jawani Oil)",
+        instruction:
+          "Dispense 5 to 7 drops of the complimentary Tila Josh Jawani Oil onto palms and massage gently until fully absorbed.",
         tip: "Apply once daily at bedtime to ease muscular tension and support localized blood flow.",
       },
       {
         step: 3,
         title: "Consistent 45-60 Day Course",
-        instruction: "Use both products consistently together to experience the synergistic benefits of internal and external Ayurveda.",
-        tip: "Store Yameny Khalta at room temperature (do not refrigerate). Keep Lava 31 Gold tightly capped.",
+        instruction:
+          "Use both formulations consistently together to experience the synergistic benefits of internal and external Ayurveda.",
+        tip: "Store 4G Avleh at room temperature (do not refrigerate). Keep Tila Josh Jawani bottle tightly capped.",
       },
     ],
     faqs: [
       {
-        question: "Is Lava 31 Gold really included free with Yameny Khalta?",
+        question: "Is Tila Josh Jawani really included free with 4G Avleh?",
         answer:
-          "Yes! Under our exclusive vitality segment, every order of Yameny Khalta with Honey includes a full-size complimentary bottle of Lava 31 Gold Men's Wellness Oil at no additional cost.",
+          "Yes! Under our exclusive vitality segment, every order of 4G Avleh Yameny Khalta includes a full-size complimentary 15ml bottle of Tila Josh Jawani at no additional charge.",
       },
       {
-        question: "How do Yameny Khalta and Lava 31 Gold work together?",
+        question: "How do 4G Avleh and Tila Josh Jawani work together?",
         answer:
-          "They form a complete holistic synergy: Yameny Khalta nourishes your body internally through pure Sidr honey, Ashwagandha, and Safed Musli, while Lava 31 Gold works externally through 31 botanical oils and Shilajit to support localized tone and circulation.",
-      },
-      {
-        question: "What makes Yameny Khalta different from regular honey?",
-        answer:
-          "Yameny Khalta is not ordinary table honey. It is an authentic herbal Rasayana combining pure Yemeni Sidr honey with concentrated extracts of Ashwagandha, Safed Musli, Royal Jelly, and Saffron.",
+          "They provide complete synergistic care: 4G Avleh delivers internal vitality through Sidr honey, Ashwagandha, and Safed Musli, while Tila Josh Jawani acts externally through specialized botanical oils to promote tone and circulation.",
       },
       {
         question: "How long does one combo pack last?",
         answer:
-          "With the recommended daily dosage of 1 tablespoon of Khalta and 5-7 drops of Lava 31 Gold, the combo package provides approximately 30 days of consistent daily use.",
+          "With the recommended daily dosage of 1 tablespoon of 4G Avleh and 5-7 drops of Tila Josh Jawani, one combo provides approximately a 30-day supply.",
       },
       {
-        question: "Is the shipping packaging discreet?",
+        question: "Are there any side effects?",
         answer:
-          "Yes. All orders are packed in discreet, tamper-proof outer boxes without any sensitive product details on the shipping label.",
+          "No. 4G Avleh and Tila Josh Jawani are formulated from 100% pure Ayurvedic botanicals and wild Sidr honey with zero harmful chemicals, steroids, or synthetic additives.",
       },
       {
-        question: "Can I order via Cash on Delivery (COD)?",
+        question: "Is the packaging discreet for home delivery?",
         answer:
-          "We offer secure prepaid online payment via Razorpay with fast dispatch, as well as assistance via WhatsApp (+91 89295 15262) for express delivery inquiries.",
+          "Yes. All orders are packed in plain, tamper-proof, discreet outer boxes with zero sensitive product naming on the delivery label.",
+      },
+      {
+        question: "Can I pay online securely?",
+        answer:
+          "Yes, we offer 256-bit encrypted online checkout via Razorpay with fast dispatch, as well as assistance on WhatsApp.",
       },
     ],
   },
   {
-    id: "shivshakti-churna",
-    slug: "shivshakti-churna",
-    inStock: false,
-    name: "Shivshakti Ayurvedic Churna",
-    subtitle: "Herbal Digestive & Detox Wellness Powder",
-    category: "Deepana & Pachana Detox",
-    dosha: "Balances Vata & Pitta",
-    price: "₹799",
-    originalPrice: "₹1,099",
-    discount: "Save 27%",
-    rating: 4.9,
-    reviewCount: 310,
-    image: "/images/products/shivshakti-churna.png",
-    gallery: [
-      "/images/products/shivshakti-churna.png",
-      "/images/hero/hero-products.png",
-      "/images/banner-leaves.png",
-    ],
-    badge: "Pure Herbal Detox",
-    description:
-      "A unique blend of time-tested herbs including Triphala, Saunf, and Ajwain to support digestion, relieve gas, and promote gentle daily cleansing.",
-    shortDescription:
-      "A unique blend of time-tested herbs to support digestion, relieve bloating, and promote daily gut wellness.",
-    longDescription:
-      "Shivshakti Ayurvedic Churna is a classical digestive and gut-cleansing formulation composed of revered Ayurvedic carminatives. Blending Haritaki, Bibhitaki, Amalaki (Triphala), Saunf, Ajwain, Hing, and rock salts, it naturally relieves bloating, hyper-acidity, constipation, and metabolic sluggishness without causing dependency or cramping.",
-    benefits: [
-      {
-        iconName: "Leaf",
-        title: "Gentle Gut Detoxification",
-        description:
-          "Triphala gently flushes built-up toxins (Ama) from the intestinal tract without griping or sudden urgency.",
-      },
-      {
-        iconName: "Sparkles",
-        title: "Rapid Gas & Acidity Relief",
-        description:
-          "Infused with Ajwain and Hing to quickly relieve flatulence, belching, and sour digestive discomfort.",
-      },
-      {
-        iconName: "ShieldCheck",
-        title: "Non-Habit Forming Formula",
-        description:
-          "Free from harsh chemical stimulants and habit-forming senna. Safe for regular digestive balancing.",
-      },
-      {
-        iconName: "CheckCircle2",
-        title: "Balances Digestive Fire (Agni)",
-        description:
-          "Stimulates gastric enzymes naturally to ensure thorough digestion and smooth nutrient absorption.",
-      },
-    ],
-    ingredients: [
-      {
-        name: "Triphala (Haritaki, Bibhitaki, Amalaki)",
-        sanskritName: "Triphala",
-        property: "The cornerstone Ayurvedic cleansing trio for balanced peristalsis and colon health.",
-      },
-      {
-        name: "Ajwain (Carom Seeds)",
-        sanskritName: "Trachyspermum ammi",
-        property: "Potent carminative that dissipates gas, eases spasmodic cramps, and stimulates appetite.",
-      },
-      {
-        name: "Saunf (Fennel Seeds)",
-        sanskritName: "Foeniculum vulgare",
-        property: "Cooling digestive seed that relieves acid reflux and freshens the digestive tract.",
-      },
-      {
-        name: "Hing (Purified Asafoetida)",
-        sanskritName: "Shuddha Hingu",
-        property: "Time-tested remedy for deep abdominal flatulence and digestive sluggishness.",
-      },
-      {
-        name: "Sendha Namak (Rock Salt)",
-        sanskritName: "Saindhava Lavana",
-        property: "Mineral-rich Ayurvedic salt that balances electrolyte hydration and kindles digestive fire.",
-      },
-      {
-        name: "Jeera (Cumin Seeds)",
-        sanskritName: "Cuminum cyminum",
-        property: "Promotes enzyme secretion in the pancreas and aids nutrient assimilation.",
-      },
-    ],
-    usageSteps: [
-      {
-        step: 1,
-        title: "Measure Half to One Spoon",
-        instruction: "Take 1/2 to 1 teaspoon (approx. 3g-5g) of Shivshakti Churna.",
-        tip: "Start with 1/2 teaspoon for the first 3 days to allow your digestive tract to adjust.",
-      },
-      {
-        step: 2,
-        title: "Lukewarm Water",
-        instruction: "Mix with a glass of lukewarm water or swallow directly followed by water.",
-        tip: "Best consumed at bedtime, at least 45 minutes after your evening dinner.",
-      },
-      {
-        step: 3,
-        title: "Wake Up Refreshed",
-        instruction: "Enjoy effortless, complete morning elimination and a light, energized stomach.",
-        tip: "Drink adequate water throughout the day for optimal detoxification benefits.",
-      },
-    ],
-    faqs: [
-      {
-        question: "Is Shivshakti Churna habit-forming?",
-        answer:
-          "No. Unlike synthetic chemical laxatives, Shivshakti Churna works by balancing natural digestive enzymes (Agni) and soothing the mucosal lining. It does not weaken natural bowel motility and is non-habit forming.",
-      },
-      {
-        question: "When is the ideal time to take it?",
-        answer:
-          "The best time to take Shivshakti Churna is at night before bed, 45 to 60 minutes after dinner, mixed with a cup of lukewarm water.",
-      },
-      {
-        question: "Can it be taken for chronic acidity and bloating?",
-        answer:
-          "Yes, the combination of Saunf, Ajwain, and Triphala specifically targets excess Pitta (heat/acidity) and sluggish Vata in the gastrointestinal tract, offering soothing relief.",
-      },
-      {
-        question: "Does it cause stomach cramps or sudden urgency?",
-        answer:
-          "No. The herbs are balanced with Sendha Namak and Saunf to ensure gentle, comfortable morning evacuation without painful abdominal spasms or sudden urgency.",
-      },
-      {
-        question: "Can I take it daily?",
-        answer:
-          "Yes, it is designed for safe daily use during periods of digestive distress or as a periodic detoxifier for 30 to 60 days.",
-      },
-      {
-        question: "How is it packaged and shipped?",
-        answer:
-          "It is securely packed in an airtight food-grade container with moisture-locking seal to retain botanical freshness and aroma.",
-      },
-    ],
-  },
-  {
-    id: "rahmorid-sugar-powder",
-    slug: "rahmorid-sugar-powder",
-    inStock: true,
-    name: "Rahmorid Sugar Powder",
-    subtitle: "Ayurvedic Blood Sugar & Metabolic Health Formulation",
+    id: "hikmo-sugar-madhumeh-daman",
+    slug: "hikmo-sugar-madhumeh-daman",
+    name: "Hikmo Sugar & Madhumeh Daman Powder",
+    subtitle: "Ayurvedic Blood Sugar & Metabolic Glycemic Support Combo",
     category: "Madhumeha & Glucose Care",
     dosha: "Balances Kapha & Pitta",
     price: "₹1,499",
     originalPrice: "₹1,899",
     discount: "Save 21%",
     rating: 4.8,
-    reviewCount: 214,
-    image: "/images/products/rahmorid-sugar-powder.jpg",
+    reviewCount: 264,
+    image: "/images/products/hikmo-madhumeh-combo.jpg",
     gallery: [
-      "/images/products/rahmorid-sugar-powder.jpg",
-      "/images/hero/hero-products.png",
-      "/images/banner-leaves.png",
+      "/images/products/hikmo-madhumeh-combo.jpg",
     ],
-    badge: "Glucose Balance",
+    badge: "100% Herbal Diabetes Care",
     description:
-      "A classical Ayurvedic formulation crafted with bitter-tonic botanicals including Karela, Jamun, Gurmar, and Methi to maintain healthy blood glucose levels and curb sugar cravings.",
+      "A classical synergistic dual formulation combining Hikmo Sugar (100g) with Madhumeh Daman Powder to support healthy blood glucose levels, manage polyurea, and rejuvenate pancreatic vitality.",
     shortDescription:
-      "Traditional Ayurvedic herbal powder to support healthy blood sugar levels, pancreatic vitality, and daily metabolic wellness.",
+      "Dual botanical formulation containing Hikmo Sugar & Madhumeh Daman Powder with Amla, Jamun seed, Gurmar, and Vijaysar for daily blood sugar and metabolic balance.",
     longDescription:
-      "Rahmorid Sugar Powder is a classical Ayurvedic formulation specifically developed to support healthy carbohydrate metabolism and balanced blood glucose levels. Harnessing revered Deepana-Pachana and Tikta (bitter) herbs—including Jamun seed, Karela (bitter gourd), Gurmar (Gymnema Sylvestre), Methi, and Vijaysar—it aids the body's natural insulin sensitivity, reduces stubborn sweet cravings, and counters glycemic fatigue without harsh side effects.",
+      "The Hikmo Sugar & Madhumeh Daman Powder combo is a specialized Ayurvedic regimen formulated to support healthy carbohydrate metabolism, regulate fasting and post-meal glucose spikes, and alleviate polyurea (frequent urination). Harnessing revered Tikta (bitter) and Kashaya (astringent) botanicals—including pure Amla, Jamun seed, Gurmar (Gymnema Sylvestre), Karela, Methi, and Vijaysar—it aids the body's natural insulin sensitivity, curtails sweet cravings, and counters glycemic fatigue without harsh side effects.",
     benefits: [
       {
-        iconName: "Activity",
-        title: "Balanced Blood Sugar Levels",
+        title: "Regulates Blood Glucose Spikes",
         description:
-          "Synergistic bitter-tonic herbs help regulate post-meal glucose spikes and promote steady daily glycemic balance.",
+          "Synergistic bitter-tonic botanicals help prevent post-meal sugar surges and promote steady daily glycemic balance.",
+        iconName: "Activity",
       },
       {
+        title: "Relief from Polyurea & Frequent Urination",
+        description:
+          "Targeted herbs strengthen renal and bladder tone, easing the discomfort of frequent daytime and nighttime urination.",
         iconName: "ShieldCheck",
+      },
+      {
+        title: "Pancreatic & Beta-Cell Nourishment",
+        description:
+          "Enriched with Vijaysar, Karela, and Gurmar to naturally rejuvenate pancreatic beta-cells and metabolic efficiency.",
+        iconName: "Flame",
+      },
+      {
         title: "Curtails Sugar & Carb Cravings",
         description:
-          "Gurmar ('Sugar Destroyer') temporarily desensitizes sweet taste buds and assists in curbing unhealthy sugar temptations.",
-      },
-      {
-        iconName: "Flame",
-        title: "Rejuvenates Pancreatic Vitality",
-        description:
-          "Enriched with Vijaysar and Karela to nourish pancreatic beta cells and enhance natural metabolic efficiency.",
-      },
-      {
+          "Gurmar ('The Sugar Destroyer') naturally desensitizes sweet taste receptors, curbing unhealthy cravings and glycemic fatigue.",
         iconName: "Zap",
-        title: "Counters Glycemic Fatigue",
-        description:
-          "Supports cellular glucose absorption so food is converted into sustained, clean daytime vitality rather than lethargy.",
       },
     ],
     ingredients: [
       {
-        name: "Karela (Bitter Gourd)",
-        sanskritName: "Momordica Charantia",
-        property: "Rich in Charantin & Polypeptide-p, natural plant compounds that aid insulin-like glucose uptake.",
+        name: "Amla (Indian Gooseberry)",
+        sanskritName: "Amalaki (Phyllanthus Emblica)",
+        property:
+          "Rich natural source of bioavailable Vitamin C and chromium that protects pancreatic tissues and enhances insulin response.",
       },
       {
         name: "Jamun Seed",
         sanskritName: "Syzygium Cumini",
-        property: "Contains Jamboline glycoside which prevents the excessive enzymatic conversion of starch into sugar.",
+        property:
+          "Contains Jamboline glycoside which prevents the excessive conversion of dietary starch into glucose.",
       },
       {
-        name: "Gurmar",
-        sanskritName: "Gymnema Sylvestre",
-        property: "Revered as Meshashringi; reduces intestinal sugar absorption and supports healthy beta-cell function.",
+        name: "Gurmar (Gymnema Sylvestre)",
+        sanskritName: "Meshashringi",
+        property:
+          "Revered as the 'Sugar Destroyer'; suppresses intestinal sugar absorption and supports optimal beta-cell function.",
       },
       {
-        name: "Methi (Fenugreek)",
-        sanskritName: "Trigonella Foenum-Graecum",
-        property: "High in galactomannan soluble fiber to improve insulin sensitivity and slow carbohydrate digestion.",
+        name: "Karela (Bitter Gourd)",
+        sanskritName: "Momordica Charantia",
+        property:
+          "Contains Charantin and Polypeptide-p, natural plant principles that facilitate cellular glucose utilization.",
       },
       {
         name: "Vijaysar",
         sanskritName: "Pterocarpus Marsupium",
-        property: "Ancient Rasayana wood praised in Charaka Samhita for pancreatic support and healthy lipid metabolism.",
+        property:
+          "Ancient Rasayana wood celebrated in classical Samhitas for pancreatic beta-cell rejuvenation and healthy lipid metabolism.",
       },
       {
-        name: "Neem",
-        sanskritName: "Azadirachta Indica",
-        property: "Potent bitter alterative that cleanses the bloodstream and revitalizes hepatic metabolic functions.",
+        name: "Methi (Fenugreek)",
+        sanskritName: "Trigonella Foenum-Graecum",
+        property:
+          "High in galactomannan soluble fiber which slows carbohydrate breakdown and improves systemic glucose sensitivity.",
       },
     ],
     usageSteps: [
       {
         step: 1,
-        title: "Measure One Spoon",
-        instruction: "Take 1 level teaspoon (approx. 3g-5g) of Rahmorid Sugar Powder.",
-        tip: "Consistent daily timing produces the strongest synergistic results.",
+        title: "Morning Dose",
+        instruction:
+          "Take 1 level teaspoon of the powder mixture stirred into half a glass of lukewarm water 30 minutes before breakfast.",
+        tip: "Consistent timing before morning meals gives the strongest glycemic stabilization.",
       },
       {
         step: 2,
-        title: "Mix with Lukewarm Water",
-        instruction: "Stir well into half a glass of lukewarm water until dissolved.",
-        tip: "Take 30 minutes before breakfast in the morning and 30 minutes before dinner at night.",
+        title: "Evening Dose",
+        instruction:
+          "Take 1 level teaspoon stirred into lukewarm water 30 minutes before evening dinner.",
+        tip: "Helps regulate post-dinner blood sugar levels and reduces nocturnal urination.",
       },
       {
         step: 3,
-        title: "Track Your Progress",
-        instruction: "Consume twice daily alongside a wholesome diet and regular hydration.",
-        tip: "Check blood glucose levels periodically to monitor your ongoing positive health response.",
+        title: "Monitor Your Progress",
+        instruction:
+          "Continue daily alongside a wholesome diet and regular hydration. Track blood glucose levels periodically.",
+        tip: "A consistent 60 to 90 day course produces optimal long-term metabolic stability.",
       },
     ],
     faqs: [
       {
-        question: "Can I take Rahmorid Sugar Powder with my allopathic diabetes medicines?",
+        question: "Can I take this combo alongside my allopathic diabetes medicines?",
         answer:
-          "Yes. Maintain a 45-60 minute gap between taking Rahmorid Sugar Powder and your prescribed allopathic medicines. Always monitor your blood sugar regularly and consult your healthcare provider.",
+          "Yes. Maintain a 45-60 minute gap between taking the Ayurvedic powder and your prescribed allopathic medicines. Always monitor your blood sugar regularly and consult your healthcare practitioner.",
       },
       {
-        question: "How long does one bottle last?",
+        question: "What does the combo include?",
         answer:
-          "With the recommended dosage of 1 teaspoon twice daily, one jar provides approximately a 30-day supply.",
+          "Each combo pack includes one container of Hikmo Sugar (100g) and one bottle of Madhumeh Daman Powder for comprehensive daily blood sugar management.",
       },
       {
         question: "Are there any added sugars or artificial additives?",
         answer:
-          "Absolutely not. Rahmorid Sugar Powder contains 100% pure botanical extracts and dried herbal powders with zero added sugar, artificial sweeteners, chemicals, or preservatives.",
+          "No. Both formulations are 100% pure botanical extracts and dried herbal powders with zero added sugar, artificial sweeteners, chemicals, or preservatives.",
       },
       {
-        question: "How soon can I expect results?",
+        question: "How soon can I expect to notice improvements?",
         answer:
-          "Many customers notice reduced cravings and improved digestion within 10 to 14 days. For optimal glycemic and metabolic stability, regular use for 60 to 90 days alongside a balanced lifestyle is recommended.",
+          "Many customers report reduced cravings, decreased urinary frequency, and better daytime energy within 10 to 14 days of regular use.",
+      },
+      {
+        question: "How long does one combo set last?",
+        answer:
+          "With the recommended dosage of 1 teaspoon twice daily, the combo set provides approximately a 30-day supply.",
       },
       {
         question: "How is it packaged and shipped?",
         answer:
-          "Packaged in a secure, tamper-proof food-grade bottle with an airtight inner seal to keep herbs potent and moisture-free during transit.",
+          "Packaged in secure, tamper-evident food-grade containers with moisture-locking seals to preserve botanical potency during transit.",
       },
     ],
   },
@@ -472,7 +353,6 @@ export const PRODUCTS: ProductDetail[] = [
 
 export function getProductBySlug(slug: string): ProductDetail | undefined {
   if (slug === "lava31-gold") {
-    // Alias to yameny-khalta since Lava 31 Gold is free with it
     return PRODUCTS.find((p) => p.slug === "yameny-khalta");
   }
   return PRODUCTS.find((p) => p.slug === slug);

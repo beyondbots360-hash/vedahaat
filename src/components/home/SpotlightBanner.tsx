@@ -33,10 +33,10 @@ export default function SpotlightBanner() {
                 Premier Formulation
               </span>
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
-                Yameny Khalta with Sidr Honey
+                4G Avleh Yameny Khalta
               </h3>
               <p className="text-xs sm:text-sm text-white/75 max-w-sm mb-6 leading-relaxed">
-                Centuries-old royal wellness recipe combining pure Sidr honey with Ashwagandha, Safed Musli, and Swarna Bhasma.
+                Centuries-old royal wellness recipe combining pure Sidr honey with Ashwagandha, Safed Musli, and dry fruits.
               </p>
 
               {/* 3 Quick Stats */}
@@ -51,7 +51,7 @@ export default function SpotlightBanner() {
                 </div>
                 <div>
                   <p className="text-xl sm:text-2xl font-bold text-[#F59E0B]">FREE</p>
-                  <p className="text-[10px] text-white/70 uppercase">Lava 31 Gold</p>
+                  <p className="text-[10px] text-white/70 uppercase">Tila Josh Jawani</p>
                 </div>
               </div>
             </div>
