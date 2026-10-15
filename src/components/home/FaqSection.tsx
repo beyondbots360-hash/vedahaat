@@ -65,7 +65,7 @@ export default function FaqSection() {
                 Our Ayurvedic specialists are available on WhatsApp to answer your lifestyle and dosage questions.
               </p>
               <a
-                href="https://wa.me/918929515262"
+                href="https://wa.me/918881990439"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F59E0B] text-[#0E2F20] text-xs font-bold hover:bg-[#EAB308] transition-colors"

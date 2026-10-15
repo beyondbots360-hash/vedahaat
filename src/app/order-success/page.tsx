@@ -21,7 +21,7 @@ function OrderSuccessContent() {
   const whatsappMessage = encodeURIComponent(
     `Hello VedaHaat! I have placed order *#${orderId}* for ${product ? product.name : "Ayurvedic product"}. Could you please share the tracking details once dispatched?`
   );
-  const whatsappUrl = `https://wa.me/918929515262?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/918881990439?text=${whatsappMessage}`;
 
   const handlePrint = () => {
     if (typeof window !== "undefined") {

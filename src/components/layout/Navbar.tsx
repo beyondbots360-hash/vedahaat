@@ -57,11 +57,11 @@ export default function Navbar() {
           {/* Right Action Button Strip */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+918929515262"
+              href="tel:+918881990439"
               className="inline-flex items-center gap-2 text-xs font-semibold text-white/90 hover:text-[#F59E0B] transition-colors bg-white/10 px-3.5 py-2 rounded-full border border-white/15"
             >
               <Phone className="w-3.5 h-3.5 text-[#F59E0B]" />
-              <span>+91 89295 15262</span>
+              <span>+91 88819 90439</span>
             </a>
             {/* Bright Yellow Herba CTA Pill */}
             <Link
@@ -120,12 +120,12 @@ export default function Navbar() {
               FAQs
             </Link>
             <a
-              href="tel:+918929515262"
+              href="tel:+918881990439"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2.5 text-white/90 py-1"
             >
               <Phone className="w-4 h-4 text-[#F59E0B]" />
-              <span>Call: +91 89295 15262</span>
+              <span>Call: +91 88819 90439</span>
             </a>
           </nav>
           <div className="pt-2">

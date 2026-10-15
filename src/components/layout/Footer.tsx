@@ -74,7 +74,7 @@ export default function Footer() {
             </p>
             <div className="pt-2">
               <a
-                href="https://wa.me/918929515262"
+                href="https://wa.me/918881990439"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold text-[#F59E0B] hover:text-white transition-colors"
@@ -146,8 +146,8 @@ export default function Footer() {
             <ul className="space-y-3 text-xs text-white/75">
               <li className="flex items-center gap-2.5">
                 <Phone className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
-                <a href="tel:+918929515262" className="hover:text-white font-semibold">
-                  +91 89295 15262
+                <a href="tel:+918881990439" className="hover:text-white font-semibold">
+                  +91 88819 90439
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

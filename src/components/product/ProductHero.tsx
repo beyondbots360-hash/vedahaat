@@ -57,7 +57,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
   const whatsappNotifyMessage = encodeURIComponent(
     `Hello VedaHaat! I am interested in *${product.name}* which is currently marked as Out of Stock. Please notify me once fresh stock becomes available.`
   );
-  const whatsappUrl = `https://wa.me/918929515262?text=${isOutOfStock ? whatsappNotifyMessage : whatsappOrderMessage}`;
+  const whatsappUrl = `https://wa.me/918881990439?text=${isOutOfStock ? whatsappNotifyMessage : whatsappOrderMessage}`;
 
   return (
     <section className="py-8 sm:py-12 bg-[#F8F5EC]">
