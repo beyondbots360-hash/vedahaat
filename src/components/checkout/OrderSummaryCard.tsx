@@ -1,8 +1,20 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { ProductDetail } from "@/data/products";
-import { ShieldCheck, Truck, Lock, Loader2, Sparkles } from "lucide-react";
+import { ShippingData } from "./ShippingForm";
+import {
+  ShieldCheck,
+  Truck,
+  Lock,
+  Loader2,
+  Sparkles,
+  MessageCircle,
+  AlertCircle,
+  CreditCard,
+  Banknote,
+} from "lucide-react";
 
 interface OrderSummaryCardProps {
   product: ProductDetail;
@@ -10,6 +22,7 @@ interface OrderSummaryCardProps {
   onQuantityChange: (qty: number) => void;
   onProceedToPay: () => void;
   isLoading: boolean;
+  shippingData?: ShippingData;
 }
 
 export default function OrderSummaryCard({
@@ -18,11 +31,39 @@ export default function OrderSummaryCard({
   onQuantityChange,
   onProceedToPay,
   isLoading,
+  shippingData,
 }: OrderSummaryCardProps) {
+  const [paymentMethod, setPaymentMethod] = useState<"online" | "cod">("online");
   const unitPrice = parseInt(product.price.replace(/[^0-9]/g, ""), 10);
   const total = unitPrice * quantity;
 
   const isOutOfStock = product.inStock === false;
+
+  const customerName = shippingData?.fullName?.trim() || "";
+  const customerPhone = shippingData?.phone?.trim() || "";
+  const customerAddress = shippingData?.addressLine?.trim() || "";
+  const customerCity = shippingData?.city?.trim() || "";
+  const customerPincode = shippingData?.pincode?.trim() || "";
+  const customerState = shippingData?.state?.trim() || "";
+
+  const hasAddress = customerAddress.length > 0;
+  const addressText = hasAddress
+    ? `🏠 *Delivery Address:* ${customerAddress}${customerCity ? `, ${customerCity}` : ""}${customerState ? `, ${customerState}` : ""}${customerPincode ? ` - ${customerPincode}` : ""}\n\n`
+    : "";
+
+  const codWhatsappMessage = encodeURIComponent(
+    `Hello VedaHaat! I want to place a *Cash on Delivery (COD)* order.\n\n` +
+    `📦 *Product:* ${product.name}\n` +
+    `🔢 *Quantity:* ${quantity}\n` +
+    `💰 *Product Amount:* ₹${total.toLocaleString("en-IN")}\n` +
+    `⚠️ *Notice:* Cash on delivery charges extra.\n\n` +
+    (customerName ? `👤 *Customer Name:* ${customerName}\n` : "") +
+    (customerPhone ? `📞 *Phone:* ${customerPhone}\n` : "") +
+    addressText +
+    `Please confirm my COD order and let me know the total delivery charges.`
+  );
+
+  const codWhatsappUrl = `https://wa.me/918881990439?text=${codWhatsappMessage}`;
 
   return (
     <div className="bg-[#FAF7F0] p-6 sm:p-7 rounded-3xl border border-[#E8E1CE] shadow-md space-y-6 sticky top-28">
@@ -162,7 +203,104 @@ export default function OrderSummaryCard({
         </div>
       </div>
 
-      {/* Pay with Razorpay Button */}
+      {/* Payment Method Selector */}
+      {!isOutOfStock && (
+        <div className="space-y-2.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-[#174A3A] block">
+            Select Payment Method
+          </label>
+
+          <div className="grid grid-cols-1 gap-2.5">
+            {/* Option 1: Pay Online */}
+            <button
+              type="button"
+              onClick={() => setPaymentMethod("online")}
+              className={`p-3.5 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                paymentMethod === "online"
+                  ? "bg-white border-[#174A3A] ring-2 ring-[#174A3A]/20 shadow-xs"
+                  : "bg-white/60 border-[#E8E1CE] hover:border-[#174A3A]/40"
+              }`}
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <div
+                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                    paymentMethod === "online"
+                      ? "bg-[#174A3A] text-white"
+                      : "bg-[#EFE8D8] text-[#174A3A]"
+                  }`}
+                >
+                  <CreditCard className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-xs sm:text-sm text-[#174A3A]">
+                      Pay Online
+                    </span>
+                    <span className="text-[10px] font-bold text-[#2E6B47] bg-[#EBF2EC] border border-[#D3E4D7] px-2 py-0.5 rounded-full uppercase">
+                      Free Delivery
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-[#5C665F] truncate">
+                    Instant UPI (GPay, PhonePe), Cards & NetBanking
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                  paymentMethod === "online" ? "border-[#174A3A] bg-[#174A3A]" : "border-[#C5BDAA]"
+                }`}
+              >
+                {paymentMethod === "online" && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+              </div>
+            </button>
+
+            {/* Option 2: Cash on Delivery */}
+            <button
+              type="button"
+              onClick={() => setPaymentMethod("cod")}
+              className={`p-3.5 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                paymentMethod === "cod"
+                  ? "bg-white border-[#D97706] ring-2 ring-[#D97706]/20 shadow-xs"
+                  : "bg-white/60 border-[#E8E1CE] hover:border-[#D97706]/40"
+              }`}
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <div
+                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                    paymentMethod === "cod"
+                      ? "bg-[#D97706] text-white"
+                      : "bg-[#FDF3E3] text-[#D97706]"
+                  }`}
+                >
+                  <Banknote className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-xs sm:text-sm text-[#174A3A]">
+                      Cash on Delivery
+                    </span>
+                    <span className="text-[10px] font-bold text-[#B45309] bg-[#FEF3C7] border border-[#FDE68A] px-2 py-0.5 rounded-full uppercase">
+                      Charges Extra
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-[#5C665F] truncate">
+                    Confirm & order directly on WhatsApp
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                  paymentMethod === "cod" ? "border-[#D97706] bg-[#D97706]" : "border-[#C5BDAA]"
+                }`}
+              >
+                {paymentMethod === "cod" && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+              </div>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Dynamic Action Button based on Payment Method */}
       <div>
         {isOutOfStock ? (
           <button
@@ -172,7 +310,7 @@ export default function OrderSummaryCard({
           >
             <span>Product Out of Stock • Orders Paused</span>
           </button>
-        ) : (
+        ) : paymentMethod === "online" ? (
           <button
             type="button"
             onClick={onProceedToPay}
@@ -191,20 +329,56 @@ export default function OrderSummaryCard({
               </>
             )}
           </button>
+        ) : (
+          <div className="space-y-3">
+            <a
+              href={codWhatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full py-4 px-6 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-sm sm:text-base shadow-md hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2.5 cursor-pointer text-center"
+            >
+              <MessageCircle className="w-5 h-5 fill-white shrink-0" />
+              <span>Place COD Order via WhatsApp</span>
+            </a>
+
+            {/* Note: Cash on delivery charges extra */}
+            <div className="p-3.5 rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] flex items-start gap-2.5 text-xs text-[#92400E]">
+              <AlertCircle className="w-4 h-4 text-[#D97706] shrink-0 mt-0.5" />
+              <div className="leading-relaxed">
+                <p className="font-bold text-[#78350F]">Cash on delivery charges extra</p>
+                <p className="text-[11px] text-[#92400E] mt-0.5">
+                  Our customer care executive will verify your address and confirm the exact COD courier handling charges on WhatsApp before dispatch.
+                </p>
+              </div>
+            </div>
+          </div>
         )}
       </div>
 
-      {/* Payment Security Badges */}
-      <div className="space-y-2 pt-1 border-t border-[#E8E1CE] text-[11px] text-[#6E7A70]">
-        <div className="flex items-center gap-2">
-          <ShieldCheck className="w-4 h-4 text-[#3B7A57] shrink-0" />
-          <span>256-Bit SSL Encrypted & Razorpay Verified Gateway</span>
+      {/* Payment Security / Support Badges */}
+      {paymentMethod === "online" ? (
+        <div className="space-y-2 pt-1 border-t border-[#E8E1CE] text-[11px] text-[#6E7A70]">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#3B7A57] shrink-0" />
+            <span>256-Bit SSL Encrypted & Razorpay Verified Gateway</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#D6A83F] shrink-0" />
+            <span>Instant UPI (GPay, PhonePe, Paytm), Cards, NetBanking</span>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-[#D6A83F] shrink-0" />
-          <span>Instant UPI (GPay, PhonePe, Paytm), Cards, NetBanking</span>
+      ) : (
+        <div className="space-y-2 pt-1 border-t border-[#E8E1CE] text-[11px] text-[#6E7A70]">
+          <div className="flex items-center gap-2">
+            <Truck className="w-4 h-4 text-[#3B7A57] shrink-0" />
+            <span>Express Courier Dispatch across India with Live Tracking</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
+            <span>WhatsApp Helpline: +91 88819 90439</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -349,6 +349,7 @@ function CheckoutContent() {
               onQuantityChange={setQuantity}
               onProceedToPay={handleProceedToPay}
               isLoading={isLoading}
+              shippingData={shippingData}
             />
           </div>
         </div>
