@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowRight, Phone } from "lucide-react";
+import { SOCIAL_LINKS, InstagramIcon, FacebookIcon } from "@/components/icons/SocialIcons";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -128,7 +129,7 @@ export default function Navbar() {
               <span>Call: +91 88819 90439</span>
             </a>
           </nav>
-          <div className="pt-2">
+          <div className="pt-2 space-y-4">
             <Link
               href="/#products"
               onClick={() => setMobileMenuOpen(false)}
@@ -137,6 +138,30 @@ export default function Navbar() {
               <span>Shop Now</span>
               <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
+
+            <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-white/70">
+              <span className="font-semibold text-white/80">Follow VedaHaat:</span>
+              <div className="flex items-center gap-2">
+                <a
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow on Instagram"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#E1306C] hover:text-white flex items-center justify-center text-white/80 transition-all duration-300"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={SOCIAL_LINKS.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow on Facebook"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] hover:text-white flex items-center justify-center text-white/80 transition-all duration-300"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}

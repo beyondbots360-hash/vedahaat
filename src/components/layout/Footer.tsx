@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MessageCircle, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { SOCIAL_LINKS, InstagramIcon, FacebookIcon } from "@/components/icons/SocialIcons";
 
 export default function Footer() {
   return (
@@ -72,9 +73,9 @@ export default function Footer() {
             <p className="text-xs text-white/70 leading-relaxed max-w-sm">
               Authentic Indian botanical and Ayurvedic health formulations rooted in classical treatises and crafted for modern everyday wellness.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 space-y-3">
               <a
-                href="https://wa.me/918881990439"
+                href={SOCIAL_LINKS.whatsapp}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold text-[#F59E0B] hover:text-white transition-colors"
@@ -82,6 +83,30 @@ export default function Footer() {
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
                 <span>WhatsApp Consultant</span>
               </a>
+
+              <div className="flex items-center gap-2 pt-1">
+                <span className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">
+                  Follow Us:
+                </span>
+                <a
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow VedaHaat on Instagram"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#E1306C] hover:text-white flex items-center justify-center text-white/80 transition-all duration-300"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={SOCIAL_LINKS.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow VedaHaat on Facebook"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] hover:text-white flex items-center justify-center text-white/80 transition-all duration-300"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -167,14 +192,36 @@ export default function Footer() {
         {/* Bottom Rights Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <p>© {new Date().getFullYear()} VedaHaat. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <span>•</span>
-            <Link href="/" className="hover:text-white transition-colors">
-              Terms & Conditions
-            </Link>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
+              <Link href="/" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <span>•</span>
+              <Link href="/" className="hover:text-white transition-colors">
+                Terms & Conditions
+              </Link>
+            </div>
+            <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-white/10">
+              <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="text-white/60 hover:text-[#E1306C] transition-colors"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="text-white/60 hover:text-[#1877F2] transition-colors"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
