@@ -177,8 +177,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
-                <a href="mailto:support@vedahaat.in" className="hover:text-white">
-                  support@vedahaat.in
+                <a href="mailto:haidarmalik969@gmail.com" className="hover:text-white">
+                  haidarmalik969@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
           status: "paid",
           customer_name: customer.fullName.trim(),
           customer_phone: customer.phone.replace(/[^0-9]/g, ""),
-          customer_email: customer.email?.trim() || "orders@vedahaat.in",
+          customer_email: customer.email?.trim() || "haidarmalik969@gmail.com",
           address_line: customer.addressLine.trim(),
           landmark: customer.landmark?.trim() || null,
           city: customer.city.trim(),

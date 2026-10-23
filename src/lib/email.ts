@@ -23,7 +23,7 @@ export interface OrderEmailPayload {
 
 export async function sendOrderAlertEmail(payload: OrderEmailPayload): Promise<boolean> {
   const { orderId, paymentId, customer, product } = payload;
-  const adminEmail = process.env.ADMIN_EMAIL || "info@vedahaat.in";
+  const adminEmail = process.env.ADMIN_EMAIL || "haidarmalik969@gmail.com";
 
   const emailHtml = `
     <!DOCTYPE html>
