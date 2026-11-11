@@ -107,7 +107,7 @@ export async function sendOrderAlertEmail(payload: OrderEmailPayload): Promise<b
             </tr>
             <tr>
               <td class="label">Email Address:</td>
-              <td class="value"><a href="mailto:${customer.email}" style="color: #174A3A; text-decoration: none;">${customer.email}</a></td>
+              <td class="value">${customer.email ? `<a href="mailto:${customer.email}" style="color: #174A3A; text-decoration: none;">${customer.email}</a>` : '<span style="color: #8A958D; font-style: italic;">Not provided</span>'}</td>
             </tr>
             <tr>
               <td class="label">Delivery Address:</td>

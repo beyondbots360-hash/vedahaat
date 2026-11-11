@@ -105,7 +105,8 @@ function CheckoutContent() {
       newErrors.phone = "Please enter a valid 10-digit Indian mobile number.";
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(shippingData.email.trim())) {
+    const trimmedEmail = shippingData.email.trim();
+    if (trimmedEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       newErrors.email = "Please enter a valid email address.";
     }
 

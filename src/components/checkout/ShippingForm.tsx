@@ -84,7 +84,7 @@ export default function ShippingForm({ data, onChange, errors }: ShippingFormPro
           {/* Email */}
           <div>
             <label className="block text-xs font-semibold text-[#252A26] mb-1.5">
-              Email Address (For Order Invoice) <span className="text-red-500">*</span>
+              Email Address <span className="text-[#7D8A80] font-normal">(Optional)</span>
             </label>
             <div className="relative">
               <input
