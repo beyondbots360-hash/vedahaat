@@ -46,14 +46,15 @@ export default function Footer() {
             </div>
 
             {/* Showcase Cutout */}
-            <div className="hidden lg:flex lg:col-span-4 items-center justify-center relative h-52">
-              <Image
-                src="/images/products/yameny-khalta-combo.jpg"
-                alt="VedaHaat Botanical Products"
-                width={220}
-                height={220}
-                className="object-contain drop-shadow-2xl"
-              />
+            <div className="hidden lg:flex lg:col-span-4 items-center justify-center relative">
+              <div className="relative w-56 h-52 rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
+                <Image
+                  src="/images/products/hikmo-madhumeh-combo.jpg"
+                  alt="Hikmo Sugar & Madhumeh Daman Powder"
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
             </div>
           </div>
         </div>

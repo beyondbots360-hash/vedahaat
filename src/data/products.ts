@@ -56,6 +56,149 @@ export interface ProductDetail {
 
 export const PRODUCTS: ProductDetail[] = [
   {
+    id: "hikmo-sugar-madhumeh-daman",
+    slug: "hikmo-sugar-madhumeh-daman",
+    name: "Hikmo Sugar & Madhumeh Daman Powder",
+    subtitle: "Ayurvedic Blood Sugar & Metabolic Glycemic Support Combo",
+    category: "Madhumeha & Glucose Care",
+    dosha: "Balances Kapha & Pitta",
+    price: "₹1,499",
+    originalPrice: "₹1,899",
+    discount: "Save 21%",
+    rating: 4.8,
+    reviewCount: 264,
+    image: "/images/products/hikmo-madhumeh-combo.jpg",
+    gallery: [
+      "/images/products/hikmo-madhumeh-combo.jpg",
+    ],
+    badge: "100% Herbal Diabetes Care",
+    description:
+      "A classical synergistic dual formulation combining Hikmo Sugar (100g) with Madhumeh Daman Powder to support healthy blood glucose levels, manage polyurea, and rejuvenate pancreatic vitality.",
+    shortDescription:
+      "Dual botanical formulation containing Hikmo Sugar & Madhumeh Daman Powder with Amla, Jamun seed, Gurmar, and Vijaysar for daily blood sugar and metabolic balance.",
+    longDescription:
+      "The Hikmo Sugar & Madhumeh Daman Powder combo is a specialized Ayurvedic regimen formulated to support healthy carbohydrate metabolism, regulate fasting and post-meal glucose spikes, and alleviate polyurea (frequent urination). Harnessing revered Tikta (bitter) and Kashaya (astringent) botanicals—including pure Amla, Jamun seed, Gurmar (Gymnema Sylvestre), Karela, Methi, and Vijaysar—it aids the body's natural insulin sensitivity, curtails sweet cravings, and counters glycemic fatigue without harsh side effects.",
+    benefits: [
+      {
+        title: "Regulates Blood Glucose Spikes",
+        description:
+          "Synergistic bitter-tonic botanicals help prevent post-meal sugar surges and promote steady daily glycemic balance.",
+        iconName: "Activity",
+      },
+      {
+        title: "Relief from Polyurea & Frequent Urination",
+        description:
+          "Targeted herbs strengthen renal and bladder tone, easing the discomfort of frequent daytime and nighttime urination.",
+        iconName: "ShieldCheck",
+      },
+      {
+        title: "Pancreatic & Beta-Cell Nourishment",
+        description:
+          "Enriched with Vijaysar, Karela, and Gurmar to naturally rejuvenate pancreatic beta-cells and metabolic efficiency.",
+        iconName: "Flame",
+      },
+      {
+        title: "Curtails Sugar & Carb Cravings",
+        description:
+          "Gurmar ('The Sugar Destroyer') naturally desensitizes sweet taste receptors, curbing unhealthy cravings and glycemic fatigue.",
+        iconName: "Zap",
+      },
+    ],
+    ingredients: [
+      {
+        name: "Amla (Indian Gooseberry)",
+        sanskritName: "Amalaki (Phyllanthus Emblica)",
+        property:
+          "Rich natural source of bioavailable Vitamin C and chromium that protects pancreatic tissues and enhances insulin response.",
+      },
+      {
+        name: "Jamun Seed",
+        sanskritName: "Syzygium Cumini",
+        property:
+          "Contains Jamboline glycoside which prevents the excessive conversion of dietary starch into glucose.",
+      },
+      {
+        name: "Gurmar (Gymnema Sylvestre)",
+        sanskritName: "Meshashringi",
+        property:
+          "Revered as the 'Sugar Destroyer'; suppresses intestinal sugar absorption and supports optimal beta-cell function.",
+      },
+      {
+        name: "Karela (Bitter Gourd)",
+        sanskritName: "Momordica Charantia",
+        property:
+          "Contains Charantin and Polypeptide-p, natural plant principles that facilitate cellular glucose utilization.",
+      },
+      {
+        name: "Vijaysar",
+        sanskritName: "Pterocarpus Marsupium",
+        property:
+          "Ancient Rasayana wood celebrated in classical Samhitas for pancreatic beta-cell rejuvenation and healthy lipid metabolism.",
+      },
+      {
+        name: "Methi (Fenugreek)",
+        sanskritName: "Trigonella Foenum-Graecum",
+        property:
+          "High in galactomannan soluble fiber which slows carbohydrate breakdown and improves systemic glucose sensitivity.",
+      },
+    ],
+    usageSteps: [
+      {
+        step: 1,
+        title: "Morning Dose",
+        instruction:
+          "Take 1 level teaspoon of the powder mixture stirred into half a glass of lukewarm water 30 minutes before breakfast.",
+        tip: "Consistent timing before morning meals gives the strongest glycemic stabilization.",
+      },
+      {
+        step: 2,
+        title: "Evening Dose",
+        instruction:
+          "Take 1 level teaspoon stirred into lukewarm water 30 minutes before evening dinner.",
+        tip: "Helps regulate post-dinner blood sugar levels and reduces nocturnal urination.",
+      },
+      {
+        step: 3,
+        title: "Monitor Your Progress",
+        instruction:
+          "Continue daily alongside a wholesome diet and regular hydration. Track blood glucose levels periodically.",
+        tip: "A consistent 60 to 90 day course produces optimal long-term metabolic stability.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can I take this combo alongside my allopathic diabetes medicines?",
+        answer:
+          "Yes. Maintain a 45-60 minute gap between taking the Ayurvedic powder and your prescribed allopathic medicines. Always monitor your blood sugar regularly and consult your healthcare practitioner.",
+      },
+      {
+        question: "What does the combo include?",
+        answer:
+          "Each combo pack includes one container of Hikmo Sugar (100g) and one bottle of Madhumeh Daman Powder for comprehensive daily blood sugar management.",
+      },
+      {
+        question: "Are there any added sugars or artificial additives?",
+        answer:
+          "No. Both formulations are 100% pure botanical extracts and dried herbal powders with zero added sugar, artificial sweeteners, chemicals, or preservatives.",
+      },
+      {
+        question: "How soon can I expect to notice improvements?",
+        answer:
+          "Many customers report reduced cravings, decreased urinary frequency, and better daytime energy within 10 to 14 days of regular use.",
+      },
+      {
+        question: "How long does one combo set last?",
+        answer:
+          "With the recommended dosage of 1 teaspoon twice daily, the combo set provides approximately a 30-day supply.",
+      },
+      {
+        question: "How is it packaged and shipped?",
+        answer:
+          "Packaged in secure, tamper-evident food-grade containers with moisture-locking seals to preserve botanical potency during transit.",
+      },
+    ],
+  },
+  {
     id: "yameny-khalta",
     slug: "yameny-khalta",
     name: "4G Avleh Yameny Khalta with Sidr Honey",
@@ -203,149 +346,6 @@ export const PRODUCTS: ProductDetail[] = [
         question: "Can I pay online securely?",
         answer:
           "Yes, we offer 256-bit encrypted online checkout via Razorpay with fast dispatch, as well as assistance on WhatsApp.",
-      },
-    ],
-  },
-  {
-    id: "hikmo-sugar-madhumeh-daman",
-    slug: "hikmo-sugar-madhumeh-daman",
-    name: "Hikmo Sugar & Madhumeh Daman Powder",
-    subtitle: "Ayurvedic Blood Sugar & Metabolic Glycemic Support Combo",
-    category: "Madhumeha & Glucose Care",
-    dosha: "Balances Kapha & Pitta",
-    price: "₹1,499",
-    originalPrice: "₹1,899",
-    discount: "Save 21%",
-    rating: 4.8,
-    reviewCount: 264,
-    image: "/images/products/hikmo-madhumeh-combo.jpg",
-    gallery: [
-      "/images/products/hikmo-madhumeh-combo.jpg",
-    ],
-    badge: "100% Herbal Diabetes Care",
-    description:
-      "A classical synergistic dual formulation combining Hikmo Sugar (100g) with Madhumeh Daman Powder to support healthy blood glucose levels, manage polyurea, and rejuvenate pancreatic vitality.",
-    shortDescription:
-      "Dual botanical formulation containing Hikmo Sugar & Madhumeh Daman Powder with Amla, Jamun seed, Gurmar, and Vijaysar for daily blood sugar and metabolic balance.",
-    longDescription:
-      "The Hikmo Sugar & Madhumeh Daman Powder combo is a specialized Ayurvedic regimen formulated to support healthy carbohydrate metabolism, regulate fasting and post-meal glucose spikes, and alleviate polyurea (frequent urination). Harnessing revered Tikta (bitter) and Kashaya (astringent) botanicals—including pure Amla, Jamun seed, Gurmar (Gymnema Sylvestre), Karela, Methi, and Vijaysar—it aids the body's natural insulin sensitivity, curtails sweet cravings, and counters glycemic fatigue without harsh side effects.",
-    benefits: [
-      {
-        title: "Regulates Blood Glucose Spikes",
-        description:
-          "Synergistic bitter-tonic botanicals help prevent post-meal sugar surges and promote steady daily glycemic balance.",
-        iconName: "Activity",
-      },
-      {
-        title: "Relief from Polyurea & Frequent Urination",
-        description:
-          "Targeted herbs strengthen renal and bladder tone, easing the discomfort of frequent daytime and nighttime urination.",
-        iconName: "ShieldCheck",
-      },
-      {
-        title: "Pancreatic & Beta-Cell Nourishment",
-        description:
-          "Enriched with Vijaysar, Karela, and Gurmar to naturally rejuvenate pancreatic beta-cells and metabolic efficiency.",
-        iconName: "Flame",
-      },
-      {
-        title: "Curtails Sugar & Carb Cravings",
-        description:
-          "Gurmar ('The Sugar Destroyer') naturally desensitizes sweet taste receptors, curbing unhealthy cravings and glycemic fatigue.",
-        iconName: "Zap",
-      },
-    ],
-    ingredients: [
-      {
-        name: "Amla (Indian Gooseberry)",
-        sanskritName: "Amalaki (Phyllanthus Emblica)",
-        property:
-          "Rich natural source of bioavailable Vitamin C and chromium that protects pancreatic tissues and enhances insulin response.",
-      },
-      {
-        name: "Jamun Seed",
-        sanskritName: "Syzygium Cumini",
-        property:
-          "Contains Jamboline glycoside which prevents the excessive conversion of dietary starch into glucose.",
-      },
-      {
-        name: "Gurmar (Gymnema Sylvestre)",
-        sanskritName: "Meshashringi",
-        property:
-          "Revered as the 'Sugar Destroyer'; suppresses intestinal sugar absorption and supports optimal beta-cell function.",
-      },
-      {
-        name: "Karela (Bitter Gourd)",
-        sanskritName: "Momordica Charantia",
-        property:
-          "Contains Charantin and Polypeptide-p, natural plant principles that facilitate cellular glucose utilization.",
-      },
-      {
-        name: "Vijaysar",
-        sanskritName: "Pterocarpus Marsupium",
-        property:
-          "Ancient Rasayana wood celebrated in classical Samhitas for pancreatic beta-cell rejuvenation and healthy lipid metabolism.",
-      },
-      {
-        name: "Methi (Fenugreek)",
-        sanskritName: "Trigonella Foenum-Graecum",
-        property:
-          "High in galactomannan soluble fiber which slows carbohydrate breakdown and improves systemic glucose sensitivity.",
-      },
-    ],
-    usageSteps: [
-      {
-        step: 1,
-        title: "Morning Dose",
-        instruction:
-          "Take 1 level teaspoon of the powder mixture stirred into half a glass of lukewarm water 30 minutes before breakfast.",
-        tip: "Consistent timing before morning meals gives the strongest glycemic stabilization.",
-      },
-      {
-        step: 2,
-        title: "Evening Dose",
-        instruction:
-          "Take 1 level teaspoon stirred into lukewarm water 30 minutes before evening dinner.",
-        tip: "Helps regulate post-dinner blood sugar levels and reduces nocturnal urination.",
-      },
-      {
-        step: 3,
-        title: "Monitor Your Progress",
-        instruction:
-          "Continue daily alongside a wholesome diet and regular hydration. Track blood glucose levels periodically.",
-        tip: "A consistent 60 to 90 day course produces optimal long-term metabolic stability.",
-      },
-    ],
-    faqs: [
-      {
-        question: "Can I take this combo alongside my allopathic diabetes medicines?",
-        answer:
-          "Yes. Maintain a 45-60 minute gap between taking the Ayurvedic powder and your prescribed allopathic medicines. Always monitor your blood sugar regularly and consult your healthcare practitioner.",
-      },
-      {
-        question: "What does the combo include?",
-        answer:
-          "Each combo pack includes one container of Hikmo Sugar (100g) and one bottle of Madhumeh Daman Powder for comprehensive daily blood sugar management.",
-      },
-      {
-        question: "Are there any added sugars or artificial additives?",
-        answer:
-          "No. Both formulations are 100% pure botanical extracts and dried herbal powders with zero added sugar, artificial sweeteners, chemicals, or preservatives.",
-      },
-      {
-        question: "How soon can I expect to notice improvements?",
-        answer:
-          "Many customers report reduced cravings, decreased urinary frequency, and better daytime energy within 10 to 14 days of regular use.",
-      },
-      {
-        question: "How long does one combo set last?",
-        answer:
-          "With the recommended dosage of 1 teaspoon twice daily, the combo set provides approximately a 30-day supply.",
-      },
-      {
-        question: "How is it packaged and shipped?",
-        answer:
-          "Packaged in secure, tamper-evident food-grade containers with moisture-locking seals to preserve botanical potency during transit.",
       },
     ],
   },

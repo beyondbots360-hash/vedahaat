@@ -28,27 +28,27 @@ export default function HeroSection() {
             {/* Small Pill Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#F59E0B] text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
               <Leaf className="w-3.5 h-3.5 fill-current" />
-              <span>100% Organic Botanical Science</span>
+              <span>100% Natural Ayurvedic Diabetes Care</span>
             </div>
 
-            {/* Massive Bold Headline matching Reference Image */}
+            {/* Massive Bold Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-sans font-extrabold tracking-tight leading-[1.08] text-white">
-              Nature, <br />
-              <span className="text-[#F59E0B]">Perfected Daily</span>
+              Live Healthier, <br />
+              <span className="text-[#F59E0B]">Balanced Sugar Daily</span>
             </h1>
 
             {/* Subtext */}
             <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-lg font-normal">
-              Experience authentic Ayurvedic and herbal formulations crafted from wild Sidr honey, Himalayan Shilajit, and classical Rasayana herbs for sustained vitality.
+              Experience authentic Ayurvedic glycemic support with Hikmo Sugar & Madhumeh Daman Powder. Powered by pure Amla, Jamun seed, Gurmar, and Vijaysar to help regulate blood sugar and ease polyurea.
             </p>
 
-            {/* Dual Buttons matching Herba Reference */}
+            {/* Dual Buttons */}
             <div className="pt-3 flex flex-wrap items-center gap-4">
               <Link
-                href="#products"
+                href="/products/hikmo-sugar-madhumeh-daman"
                 className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#F59E0B] text-[#0E2F20] text-base font-extrabold shadow-lg hover:bg-[#EAB308] hover:shadow-2xl hover:scale-[1.03] transition-all duration-300"
               >
-                <span>Explore Now</span>
+                <span>Order Hikmo Sugar</span>
                 <ArrowRight className="w-4 h-4 text-[#0E2F20] group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -63,17 +63,17 @@ export default function HeroSection() {
             <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-white/75">
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
-                <span>Doctor Formulated</span>
+                <span>Amla & Jamun Powered</span>
               </div>
               <span>•</span>
               <div className="flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-[#F59E0B]" />
-                <span>Lab Verified Purity</span>
+                <span>Zero Chemical Additives</span>
               </div>
               <span>•</span>
               <div className="flex items-center gap-1.5">
                 <Leaf className="w-4 h-4 text-[#F59E0B]" />
-                <span>Zero Preservatives</span>
+                <span>Safe for Daily Use</span>
               </div>
             </div>
           </motion.div>
@@ -91,10 +91,10 @@ export default function HeroSection() {
             {/* Banner Showcase Frame */}
             <div className="relative w-full max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black/30 group">
               <Image
-                src="/images/hero/hero-banner.jpg"
-                alt="VedaHaat 4G Avleh Yameny Khalta & Tila Josh Jawani"
-                width={800}
-                height={550}
+                src="/images/hero/hikmo-sugar-banner.png"
+                alt="Hikmo Sugar & Madhumeh Daman Powder - Natural Care for Healthy Living"
+                width={1200}
+                height={500}
                 priority
                 className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
               />

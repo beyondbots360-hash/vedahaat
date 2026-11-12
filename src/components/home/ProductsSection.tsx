@@ -62,7 +62,7 @@ export default function ProductsSection() {
             Wellness, Naturally Elevated
           </h2>
           <p className="text-sm text-[#526056] mt-2">
-            Targeted herbal dual-formulations designed for royal vitality and glycemic stability.
+            Targeted herbal dual-formulations designed for daily glycemic stability and natural metabolic balance.
           </p>
         </div>
 
@@ -83,12 +83,19 @@ export default function ProductsSection() {
                 className="bg-[#EBF2ED] rounded-[32px] p-6 sm:p-8 border border-[#D7E5DC] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group"
               >
                 {/* Special Combo Badge */}
-                {isYameny && !isOutOfStock && (
+                {!isOutOfStock && (
                   <div className="absolute top-5 right-5 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F59E0B] text-[#0E2F20] text-[11px] font-bold shadow-sm uppercase tracking-wider">
-                      <Gift className="w-3.5 h-3.5" />
-                      <span>FREE Tila Josh Jawani</span>
-                    </span>
+                    {isYameny ? (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F59E0B] text-[#0E2F20] text-[11px] font-bold shadow-sm uppercase tracking-wider">
+                        <Gift className="w-3.5 h-3.5" />
+                        <span>FREE Tila Josh Jawani</span>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0E2F20] text-[#F59E0B] border border-[#F59E0B]/30 text-[11px] font-bold shadow-sm uppercase tracking-wider">
+                        <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
+                        <span>{product.badge || "100% Herbal Diabetes Care"}</span>
+                      </span>
+                    )}
                   </div>
                 )}
 

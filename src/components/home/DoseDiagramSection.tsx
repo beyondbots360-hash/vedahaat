@@ -1,38 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, Leaf } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { motion } from "framer-motion";
 
 const NODES = [
   {
-    title: "Yemeni Sidr Honey",
-    subtitle: "Cellular Ojas & Bioactive Antioxidants",
+    title: "Wild Amla (Indian Gooseberry)",
+    subtitle: "Natural Vitamin C & Cellular Pancreatic Tonic",
     position: "top-left",
   },
   {
-    title: "Ashwagandha KSM-66",
-    subtitle: "Premier Adaptogen & Cortisol Balance",
+    title: "Gurmar (Gymnema Sylvestre)",
+    subtitle: "Revered Sugar Destroyer, Restrains Sweet Cravings",
     position: "top-right",
   },
   {
-    title: "Shuddha Shilajit",
-    subtitle: "80+ Fulvic Trace Minerals & Tissue Tone",
+    title: "Jamun Seed Extract",
+    subtitle: "Regulates Post-Meal Glucose Spikes & Starch Conversion",
     position: "mid-left",
   },
   {
-    title: "Triphala Extract",
-    subtitle: "Gentle Colon Detox & Agni Stimulator",
+    title: "Vijaysar Bark Extract",
+    subtitle: "Traditional Rasayana for Pancreatic Beta-Cell Rejuvenation",
     position: "mid-right",
   },
   {
-    title: "Swarna Bhasma 24K",
-    subtitle: "Calcined Micro-Gold for Vitality",
+    title: "Dalchini (Ceylon Cinnamon)",
+    subtitle: "Promotes Natural Metabolic Sensitivity & Glucose Uptake",
     position: "bottom-left",
   },
   {
-    title: "Safed Musli Extract",
-    subtitle: "Tissue Rejuvenation & Muscle Vigor",
+    title: "Karela & Methi Extract",
+    subtitle: "Potent Bitter Glycosides to Relieve Polyurea",
     position: "bottom-right",
   },
 ];
@@ -56,7 +56,7 @@ export default function DoseDiagramSection() {
           Nature Inside Every Dose
         </h2>
         <p className="text-sm sm:text-base text-white/70 max-w-xl mx-auto mb-16">
-          Six foundational classical botanicals unified to restore physical stamina, mental clarity, and internal digestive harmony.
+          Six classical Ayurvedic botanicals united to support healthy glucose metabolism, nourish pancreatic beta-cells, and ease polyurea.
         </p>
 
         {/* 6-Node Circular Callout Diagram with Central Bottle */}
@@ -83,13 +83,13 @@ export default function DoseDiagramSection() {
 
           {/* Center Bottle Showcase */}
           <div className="lg:col-span-4 relative flex items-center justify-center py-6">
-            <div className="relative w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-radial from-[#1A5338] to-transparent p-4 flex items-center justify-center">
+            <div className="relative w-72 sm:w-88 h-72 sm:h-88 rounded-3xl overflow-hidden border border-white/15 bg-white/5 p-2 flex items-center justify-center shadow-2xl">
               <Image
-                src="/images/products/yameny-khalta-combo.jpg"
-                alt="Central Botanical Formulation"
-                width={320}
-                height={320}
-                className="object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-500"
+                src="/images/products/hikmo-ingredients-power.jpg"
+                alt="Hikmo Sugar - The Power of Natural Ingredients"
+                width={400}
+                height={400}
+                className="object-cover w-full h-full rounded-2xl hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
